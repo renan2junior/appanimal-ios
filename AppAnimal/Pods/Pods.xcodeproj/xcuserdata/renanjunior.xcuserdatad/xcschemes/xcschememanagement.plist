@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>A0128C4A2828FD0AC54F54315D8218C5</key>
+		<key>12FF5F855849DC8E767ABD6296671BA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C97D1F95BE505EC0C275023CDA01E803</key>
+		<key>97F2722803094407A68F6352AB972046</key>
 		<dict>
 			<key>primary</key>
 			<true/>

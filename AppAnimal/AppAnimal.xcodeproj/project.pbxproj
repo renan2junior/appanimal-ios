@@ -13,7 +13,7 @@
 		875398F41B70DF6C00752667 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875398F31B70DF6C00752667 /* Images.xcassets */; };
 		875398F71B70DF6C00752667 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 875398F51B70DF6C00752667 /* LaunchScreen.xib */; };
 		875399031B70DF6C00752667 /* AppAnimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875399021B70DF6C00752667 /* AppAnimalTests.swift */; };
-		919D041745DB39F41B403CAD /* libPods-AppAnimal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F81393848542F4FF1146CAF /* libPods-AppAnimal.a */; };
+		F279737F601E0C6B1888DAC8 /* Pods_AppAnimal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F81393848542F4FF1146CAF /* libPods-AppAnimal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppAnimal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80368B6E0D8BA2B664704A66 /* Pods-AppAnimal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAnimal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppAnimal/Pods-AppAnimal.debug.xcconfig"; sourceTree = "<group>"; };
 		875398E71B70DF6C00752667 /* AppAnimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppAnimal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		875398EB1B70DF6C00752667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 		875398FC1B70DF6C00752667 /* AppAnimalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppAnimalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		875399011B70DF6C00752667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		875399021B70DF6C00752667 /* AppAnimalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnimalTests.swift; sourceTree = "<group>"; };
+		88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAnimal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28D07534D1A5A18139FDC88 /* Pods-AppAnimal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAnimal.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppAnimal/Pods-AppAnimal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				919D041745DB39F41B403CAD /* libPods-AppAnimal.a in Frameworks */,
+				F279737F601E0C6B1888DAC8 /* Pods_AppAnimal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +73,7 @@
 		607A8455F7BE6EB2029C076F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F81393848542F4FF1146CAF /* libPods-AppAnimal.a */,
+				88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,6 +148,7 @@
 				875398E41B70DF6C00752667 /* Frameworks */,
 				875398E51B70DF6C00752667 /* Resources */,
 				74E61A61B3EAE0062A14ACA5 /* Copy Pods Resources */,
+				AA63F389D64E5F8FEFFB4F8E /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +263,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppAnimal/Pods-AppAnimal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA63F389D64E5F8FEFFB4F8E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppAnimal/Pods-AppAnimal-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -1,7 +1,7 @@
 platform :ios, '8.0'
+use_frameworks!
 
 target 'AppAnimal' do
-
-pod 'AFNetworking', '~>2.0'
+pod 'Alamofire', '1.2.3'
 
 end

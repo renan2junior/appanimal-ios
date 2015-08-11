@@ -11,13 +11,14 @@ import UIKit
 import Alamofire
 
 
-
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         pegaDados();
+        
+       // println("Dentro do Controller \(GlobalVariables.sharedManager.URL_BASSE)")
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -27,20 +28,18 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
     func pegaDados(){
         
-        Alamofire.request(.GET, "https://itunes.apple.com/search?term=angry&country=br&entity=software&lang=pt_br", parameters: ["kind": "software"])
-            .response { request, response, data, error in
-                println(request)
-                println(response)
-                println(error)
-        }
         
+        let ws = ClientWS()
         
-        
+        let retorno = ws.GetPets()
+
+        debugPrint(retorno)
     }
+
+    
+    
 
 
 }

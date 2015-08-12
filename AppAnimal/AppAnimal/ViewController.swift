@@ -8,37 +8,49 @@
 
 import UIKit
 
+
+import SwiftyJSON
+
 import Alamofire
 
 
 class ViewController: UIViewController {
 
+    let ws:ClientWS = ClientWS()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        pegaDados();
         
-       // println("Dentro do Controller \(GlobalVariables.sharedManager.URL_BASSE)")
         
-        // Do any additional setup after loading the view, typically from a nib.
+        pegaListaPets()
+        
+       
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
-    func pegaDados(){
+   
+    func pegaDados2(){
         
+        let retorno2 = ws.GetPets2()
         
-        let ws = ClientWS()
+        debugPrint(retorno2)
+       
         
-        let retorno = ws.GetPets()
-
-        debugPrint(retorno)
     }
-
     
+    func pegaListaPets(){
+        
+        ws.getPets({retorno, erro in
+        
+            println("Retorno \(retorno); erro = \(erro)")
+            return
+        })
+        
+    }
     
 
 

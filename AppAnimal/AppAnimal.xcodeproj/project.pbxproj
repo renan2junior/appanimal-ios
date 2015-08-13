@@ -15,6 +15,8 @@
 		875399031B70DF6C00752667 /* AppAnimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875399021B70DF6C00752667 /* AppAnimalTests.swift */; };
 		8757DFFD1B7A164D00E1A59E /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFC1B7A164D00E1A59E /* GlobalVariables.swift */; };
 		8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFE1B7A182100E1A59E /* ClientSW.swift */; };
+		87885BF61B7CBB4700664193 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87885BF51B7CBB4700664193 /* Pet.swift */; };
+		87885BF81B7CBD4000664193 /* ParseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87885BF71B7CBD4000664193 /* ParseModels.swift */; };
 		F279737F601E0C6B1888DAC8 /* Pods_AppAnimal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		875399021B70DF6C00752667 /* AppAnimalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnimalTests.swift; sourceTree = "<group>"; };
 		8757DFFC1B7A164D00E1A59E /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		8757DFFE1B7A182100E1A59E /* ClientSW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSW.swift; sourceTree = "<group>"; };
+		87885BF51B7CBB4700664193 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		87885BF71B7CBD4000664193 /* ParseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseModels.swift; sourceTree = "<group>"; };
 		88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAnimal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28D07534D1A5A18139FDC88 /* Pods-AppAnimal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAnimal.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppAnimal/Pods-AppAnimal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				8757DFFE1B7A182100E1A59E /* ClientSW.swift */,
+				87885BF71B7CBD4000664193 /* ParseModels.swift */,
 			);
 			name = WS;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 		8757E0011B7A183B00E1A59E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				87885BF51B7CBB4700664193 /* Pet.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -325,6 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87885BF61B7CBB4700664193 /* Pet.swift in Sources */,
+				87885BF81B7CBD4000664193 /* ParseModels.swift in Sources */,
 				875398EF1B70DF6C00752667 /* ViewController.swift in Sources */,
 				875398ED1B70DF6C00752667 /* AppDelegate.swift in Sources */,
 				8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */,

@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        pegaListaPets()
+       // pegaListaPets()
         
         pegaPetByID()
         
@@ -57,6 +57,9 @@ class ViewController: UIViewController {
     func pegaPetByID(){
         
         ws.getPet("1", completionHandler: {retorno, erro in
+            
+            var pet:Pet = retorno
+            
             println("Retorno \(retorno); Erro = \(erro)")
             return
         } )

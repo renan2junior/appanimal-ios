@@ -135,7 +135,7 @@ class ClientWS{
         Alamofire.request(.GET, GlobalVariables.sharedManager.URL_BASSE+"pets/\(idpet)", parameters: nil)
             .responseJSON { (request, response, responseObject, error) in
                 if(error != nil){
-                    debugPrint(error)
+                    debugPrint(" o Erro foi \(error)")
                 }else{
                     var json:JSON = JSON(responseObject!)
                     

@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let ws:ClientWS = ClientWS()
     
     let list_pets = [
-        Pet(descricao:"Toto"), Pet(descricao:"rex")
+        Pet(descricao:"Totoffffffffffffffffffffffff"), Pet(descricao:"rghhhgdjhsfabdjkhfasjfbasnbnsbafnbasex")
     ]
     
     
@@ -52,16 +52,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-        let cell:PetCell?=tableView.dequeueReusableHeaderFooterViewWithIdentifier(textCellIdentifier) as?PetCell
+        let cell = self.tablePet.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! PetCell
         
         
         let row = indexPath.row
        
-        cell?.nome.text = list_pets[row].descricao
+        
+        let desc:String = list_pets[row].descricao!
         
         
-        return cell!
-    }
+        cell.nome.text = desc
+        
+        
+        
+        return cell    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

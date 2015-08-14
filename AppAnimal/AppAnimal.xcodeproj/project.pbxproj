@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870B5A371B7E0ECE0087063C /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870B5A361B7E0ECE0087063C /* PetCell.swift */; };
 		875398ED1B70DF6C00752667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875398EC1B70DF6C00752667 /* AppDelegate.swift */; };
 		875398EF1B70DF6C00752667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875398EE1B70DF6C00752667 /* ViewController.swift */; };
 		875398F21B70DF6C00752667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875398F01B70DF6C00752667 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		80368B6E0D8BA2B664704A66 /* Pods-AppAnimal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAnimal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppAnimal/Pods-AppAnimal.debug.xcconfig"; sourceTree = "<group>"; };
+		870B5A361B7E0ECE0087063C /* PetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
 		875398E71B70DF6C00752667 /* AppAnimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppAnimal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		875398EB1B70DF6C00752667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		875398EC1B70DF6C00752667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				875398EE1B70DF6C00752667 /* ViewController.swift */,
+				870B5A361B7E0ECE0087063C /* PetCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				87885BF81B7CBD4000664193 /* ParseModels.swift in Sources */,
 				875398EF1B70DF6C00752667 /* ViewController.swift in Sources */,
 				875398ED1B70DF6C00752667 /* AppDelegate.swift in Sources */,
+				870B5A371B7E0ECE0087063C /* PetCell.swift in Sources */,
 				8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */,
 				8757DFFD1B7A164D00E1A59E /* GlobalVariables.swift in Sources */,
 			);

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>5F609904-EBCE-461E-8E6D-D5F98D48A4FA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>AppAnimal</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>216EC3BBE0102A34067342D34F1808C032C64C78</key>
 		<string>https://bitbucket.org/dogczar/appanimal-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>AppAnimal/AppAnimal.xcodeproj/project.xcworkspace</string>
+	<string>AppAnimal/AppAnimal.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>216EC3BBE0102A34067342D34F1808C032C64C78</key>

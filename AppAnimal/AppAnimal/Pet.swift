@@ -16,7 +16,9 @@ class Pet {
     var imagem:String?
     var descricao:String?
     
-    init() {
+    init(descricao:String) {
+        
+        self.descricao = descricao
         
     }
     

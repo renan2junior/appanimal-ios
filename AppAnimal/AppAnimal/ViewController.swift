@@ -8,25 +8,59 @@
 
 import UIKit
 
-
 import SwiftyJSON
 
 import Alamofire
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let ws:ClientWS = ClientWS()
+    
+    let list_pets = [
+        Pet(descricao:"Toto"), Pet(descricao:"rex")
+    ]
+    
+    
+    
+    let textCellIdentifier = "cell"
+    
+    
+    @IBOutlet weak var tablePet: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-       // pegaListaPets()
+       // pegaPetByID()
         
-        pegaPetByID()
+        //tablePet.reloadData()
         
        
+    }
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return list_pets.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+        let cell:PetCell?=tableView.dequeueReusableHeaderFooterViewWithIdentifier(textCellIdentifier) as?PetCell
+        
+        
+        let row = indexPath.row
+       
+        cell?.nome.text = list_pets[row].descricao
+        
+        
+        return cell!
     }
 
     override func didReceiveMemoryWarning() {

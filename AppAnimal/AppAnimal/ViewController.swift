@@ -13,7 +13,7 @@ import SwiftyJSON
 import Alamofire
 
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UITableViewController {
 
     let ws:ClientWS = ClientWS()
     
@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         Pet(descricao:"Totoffffffffffffffffffffffff"), Pet(descricao:"rghhhgdjhsfabdjkhfasjfbasnbnsbafnbasex")
     ]
     
-    
+    var a : NSArray = []
     
     let textCellIdentifier = "cell"
     
@@ -34,38 +34,51 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         
-       // pegaPetByID()
-        
-        //tablePet.reloadData()
+       pegaListaPets()
         
        
     }
     
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 10
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list_pets.count
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.a.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    
-        let cell = self.tablePet.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! PetCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
-        let row = indexPath.row
+        
+        var cuidador:String = self.a[indexPath.row]["cuidador"] as! String
+        
+        
+        debugPrint(" Cuidador : \(cuidador)")
+
+        
+   /*
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        
+        cell.textLabel?.text = cuidador
+        
+     */
+        
        
         
-        let desc:String = list_pets[row].descricao!
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! PetCell
         
         
-        cell.nome.text = desc
+        cell.nome.text = "dfsjkhajkds"
         
         
+    
         
-        return cell    }
+        return cell
+    
+    
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -85,12 +98,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func pegaListaPets(){
         
         ws.getPets({retorno, erro in
+            
+            self.a = retorno!
+            
+            self.tableView.reloadData()
         
             println("Retorno \(retorno); erro = \(erro)")
             return
         })
         
     }
+    
     
     func pegaPetByID(){
         

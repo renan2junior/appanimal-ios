@@ -18,6 +18,7 @@
 		8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFE1B7A182100E1A59E /* ClientSW.swift */; };
 		87885BF61B7CBB4700664193 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87885BF51B7CBB4700664193 /* Pet.swift */; };
 		87885BF81B7CBD4000664193 /* ParseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87885BF71B7CBD4000664193 /* ParseModels.swift */; };
+		87A9D7C71B83577600C7CC06 /* PetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A9D7C61B83577600C7CC06 /* PetCell.xib */; };
 		F279737F601E0C6B1888DAC8 /* Pods_AppAnimal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		8757DFFE1B7A182100E1A59E /* ClientSW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSW.swift; sourceTree = "<group>"; };
 		87885BF51B7CBB4700664193 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		87885BF71B7CBD4000664193 /* ParseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseModels.swift; sourceTree = "<group>"; };
+		87A9D7C61B83577600C7CC06 /* PetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetCell.xib; sourceTree = "<group>"; };
 		88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAnimal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28D07534D1A5A18139FDC88 /* Pods-AppAnimal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAnimal.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppAnimal/Pods-AppAnimal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +173,7 @@
 			children = (
 				875398EE1B70DF6C00752667 /* ViewController.swift */,
 				870B5A361B7E0ECE0087063C /* PetCell.swift */,
+				87A9D7C61B83577600C7CC06 /* PetCell.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				875398F21B70DF6C00752667 /* Main.storyboard in Resources */,
+				87A9D7C71B83577600C7CC06 /* PetCell.xib in Resources */,
 				875398F71B70DF6C00752667 /* LaunchScreen.xib in Resources */,
 				875398F41B70DF6C00752667 /* Images.xcassets in Resources */,
 			);

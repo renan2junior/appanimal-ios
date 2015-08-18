@@ -17,11 +17,13 @@ class ViewController: UITableViewController {
 
     let ws:ClientWS = ClientWS()
     
+    let parse:ParseModels = ParseModels()
+    
     let list_pets = [
         Pet(descricao:"Totoffffffffffffffffffffffff"), Pet(descricao:"rghhhgdjhsfabdjkhfasjfbasnbnsbafnbasex")
     ]
     
-    var a : NSArray = []
+    var a : JSON = JSON.nullJSON
     
     let textCellIdentifier = "cell"
     
@@ -34,6 +36,10 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         
+        var xib = UINib(nibName: "PetCell", bundle: nil)
+        self.tablePet.registerNib(xib, forCellReuseIdentifier: "cell")
+        
+        
        pegaListaPets()
         
        
@@ -41,7 +47,7 @@ class ViewController: UITableViewController {
     
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 10
+        return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,29 +57,16 @@ class ViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
+        var pet : Pet = parse.parsePet(self.a[indexPath.row])
         
-        var cuidador:String = self.a[indexPath.row]["cuidador"] as! String
-        
-        
-        debugPrint(" Cuidador : \(cuidador)")
+        debugPrint(" Cuidador : \(pet.cuidador!)")
 
         
-   /*
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-        
-        cell.textLabel?.text = cuidador
-        
-     */
-        
-       
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! PetCell
+        var cell = self.tablePet.dequeueReusableCellWithIdentifier("cell") as! PetCell
         
         
-        cell.nome.text = "dfsjkhajkds"
+        cell.nome.text = pet.cuidador!
         
-        
-    
         
         return cell
     

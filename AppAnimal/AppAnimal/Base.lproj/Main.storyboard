@@ -107,6 +107,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="swy-7i-nUA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tablePet" destination="OXv-sZ-bO2" id="VrN-PN-kgd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgU-dX-5fk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

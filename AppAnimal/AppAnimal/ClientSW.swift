@@ -106,17 +106,20 @@ class ClientWS{
     
     // Retornar lista de Pets
     // Retorno Array
-    func getPets(completionHandler: (responseObject: NSArray?, error: NSError?) -> ()) {
+    func getPets(completionHandler: (responseObject: JSON?, error: NSError?) -> ()) {
         makeCall(completionHandler)
     }
     
-    func makeCall(completionHandler: (responseObject: NSArray?, error: NSError?) -> ()) {
+    func makeCall(completionHandler: (responseObject: JSON?, error: NSError?) -> ()) {
         
         debugPrint(GlobalVariables.sharedManager.URL_BASSE+"pets")
         
         Alamofire.request(.GET, GlobalVariables.sharedManager.URL_BASSE+"pets", parameters: nil)
             .responseJSON { request, response, responseObject, error in
-                completionHandler(responseObject: responseObject as? NSArray, error: error)
+                
+                var json:JSON = JSON(responseObject!)
+                
+                completionHandler(responseObject: json, error: error)
         }
     }
     

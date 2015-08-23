@@ -12,10 +12,29 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    //Identificacao AWS
+    let cognitoAccountId = ""
+    let cognitoIdentityPoolId = "us-east-1:857fe43c-8c23-430f-bf42-1a3b8acb405c"
+    let cognitoUnauthRoleArn = ""
+    let cognitoAuthRoleArn = ""
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let credentialsProvider = AWSCognitoCredentialsProvider(
+            regionType: AWSRegionType.USEast1, identityPoolId: cognitoIdentityPoolId)
+        
+        let defaultServiceConfiguration = AWSServiceConfiguration(
+            region: AWSRegionType.SAEast1, credentialsProvider: credentialsProvider)
+        
+        let maxRetry:UInt32 = 1
+        
+        defaultServiceConfiguration.maxRetryCount = maxRetry
+        defaultServiceConfiguration.timeoutIntervalForRequest = 20
+        
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = defaultServiceConfiguration
+        
         return true
     }
 

@@ -4,4 +4,6 @@ use_frameworks!
 target 'AppAnimal' do
 	pod 'Alamofire', '1.2.3'
 	pod 'SwiftyJSON', '~> 2.2.1'
+    pod 'AWSCognito'
+    pod 'AWSS3', '~> 2.2.0'
 end

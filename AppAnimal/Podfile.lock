@@ -1,13 +1,23 @@
 PODS:
   - Alamofire (1.2.3)
+  - AWSCognito (2.2.4):
+    - AWSCore (= 2.2.4)
+  - AWSCore (2.2.4)
+  - AWSS3 (2.2.4):
+    - AWSCore (= 2.2.4)
   - SwiftyJSON (2.2.1)
 
 DEPENDENCIES:
   - Alamofire (= 1.2.3)
+  - AWSCognito
+  - AWSS3 (~> 2.2.0)
   - SwiftyJSON (~> 2.2.1)
 
 SPEC CHECKSUMS:
   Alamofire: 5550bf0b575ed1a4bf9be572f9463e1015cc169e
+  AWSCognito: 1ee514de6d25940f4e498ab8c82ec162c33f7c47
+  AWSCore: 483fa0f25c8508e3364f818e9b941c6204619afa
+  AWSS3: da758d5a95e65bb9e6e718245c1a86b6f63de9ae
   SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 
 COCOAPODS: 0.38.2

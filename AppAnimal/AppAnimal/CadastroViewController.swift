@@ -49,7 +49,7 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
                 
                 Alerta.alerta("Imagem enviada", viewController: self)
                 
-                var pet = Pet(descricao: "teste")
+                var pet = Pet()
                 pet.imagem = urlImagem
                 pet.descricao = "teste"
                 pet.email = "a@a.com"

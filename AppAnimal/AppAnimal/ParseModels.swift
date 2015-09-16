@@ -19,7 +19,7 @@ class ParseModels{
      
         let desc:String =  json["pet_descricao"].stringValue
         
-        let pet:Pet = Pet(descricao: desc)
+        let pet:Pet = Pet()
 
         
         

@@ -17,11 +17,14 @@ class ViewController: UITableViewController {
 
     let ws:ClientWS = ClientWS()
     
+    
+   
+    
+
+    
+    
     let parse:ParseModels = ParseModels()
     
-    let list_pets = [
-        Pet(descricao:"Totoffffffffffffffffffffffff"), Pet(descricao:"rghhhgdjhsfabdjkhfasjfbasnbnsbafnbasex")
-    ]
     
     var a : JSON = JSON.nullJSON
     
@@ -38,6 +41,12 @@ class ViewController: UITableViewController {
         
         var xib = UINib(nibName: "PetCell", bundle: nil)
         self.tablePet.registerNib(xib, forCellReuseIdentifier: "cell")
+        
+        // Criando um novo Pet
+        // OBS : POR ENQUANTO TEM QUE PREENCHER O OBJETO TODO
+        var p = Pet()
+        p.pet_nome="Renan"
+        //ws.postPet(p)
         
         
        pegaListaPets()
@@ -59,13 +68,17 @@ class ViewController: UITableViewController {
         
         var pet : Pet = parse.parsePet(self.a[indexPath.row])
         
-        debugPrint(" Cuidador : \(pet.cuidador!)")
+        debugPrint(" Cuidador : \(pet.cuidador)")
 
         
         var cell = self.tablePet.dequeueReusableCellWithIdentifier("cell") as! PetCell
         
         
-        cell.nome.text = pet.cuidador!
+        if(pet.cuidador == nil){
+            pet.cuidador = "Vazio"
+        }
+        
+        cell.nome.text = pet.cuidador
         
         
         return cell

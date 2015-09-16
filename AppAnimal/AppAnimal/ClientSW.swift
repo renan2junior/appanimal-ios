@@ -12,6 +12,9 @@ import SwiftyJSON
 
 import Alamofire
 
+import Serialize
+
+
 //import ParseModels
 
 
@@ -135,6 +138,8 @@ class ClientWS{
         
         debugPrint(GlobalVariables.sharedManager.URL_BASSE+"pets/\(idpet)")
         
+        
+        
         Alamofire.request(.GET, GlobalVariables.sharedManager.URL_BASSE+"pets/\(idpet)", parameters: nil)
             .responseJSON { (request, response, responseObject, error) in
                 if(error != nil){
@@ -151,6 +156,32 @@ class ClientWS{
         }
     }
 
+    // Salvar um Pet
+    // Retorna JSON
+    
+    func postPet(pet:Pet){
+
+        makePostCall(pet)
+    }
+    
+    func makePostCall(pet:Pet){
+     
+        Alamofire.request(.POST, GlobalVariables.sharedManager.URL_BASSE+"pets", parameters:pet.getString() , encoding: .JSON)
+            .responseJSON { (request, response, responseObject, error) in
+                if(error != nil){
+                    debugPrint(" o Erro foi \(error)")
+                }else{
+                    var json:JSON = JSON(responseObject!)
+                    
+                    //completionHandler(responseObject: pet, error: error)
+                }
+        }
+        
+    }
+    
+    
+    
+    
     
     
 

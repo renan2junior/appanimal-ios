@@ -6,4 +6,6 @@ target 'AppAnimal' do
 	pod 'SwiftyJSON', '~> 2.2.1'
     pod 'AWSCognito'
     pod 'AWSS3', '~> 2.2.0'
+    pod 'swift-serialize'
+	
 end

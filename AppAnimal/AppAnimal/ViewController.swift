@@ -17,36 +17,32 @@ class ViewController: UITableViewController {
 
     let ws:ClientWS = ClientWS()
     
-    
-   
-    
-
-    
+    let classeTeste:PetTeste = PetTeste()
     
     let parse:ParseModels = ParseModels()
-    
     
     var a : JSON = JSON.nullJSON
     
     let textCellIdentifier = "cell"
     
-    
     @IBOutlet weak var tablePet: UITableView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         var xib = UINib(nibName: "PetCell", bundle: nil)
         self.tablePet.registerNib(xib, forCellReuseIdentifier: "cell")
         
         // Criando um novo Pet
         // OBS : POR ENQUANTO TEM QUE PREENCHER O OBJETO TODO
-        var p = Pet()
-        p.pet_nome="Renan"
-        //ws.postPet(p)
+        
+        classeTeste.PopulaPet()
+        
+        
+        // Apagando Registros
+        for var x:Int = 0 ; x <= 50; ++x{
+        //    self.ws.deletePet(x)
+        }
         
         
        pegaListaPets()

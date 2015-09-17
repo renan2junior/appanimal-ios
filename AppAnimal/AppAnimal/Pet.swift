@@ -26,15 +26,14 @@ class Pet {
     var pet_idade:String!
     var pet_porte:String!
     
-    /*
-    init(descricao:String) {
-        
-        self.descricao = descricao
-        
-    }
-    */
+    
+    
+    
+    
+    
     
     func getString()->Dictionary<String,String>{
+        
         
         let parameters:Dictionary<String,String> = [
             "pet_nome": pet_nome,
@@ -49,7 +48,7 @@ class Pet {
             "pet_idade":pet_idade,
             "pet_porte":pet_porte
         ]
-        
+
         return parameters
     }
     

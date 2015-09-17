@@ -22,6 +22,7 @@
 		8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFE1B7A182100E1A59E /* ClientSW.swift */; };
 		87885BF61B7CBB4700664193 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87885BF51B7CBB4700664193 /* Pet.swift */; };
 		87885BF81B7CBD4000664193 /* ParseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87885BF71B7CBD4000664193 /* ParseModels.swift */; };
+		879967791BAA739700A3B0A6 /* PetTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879967781BAA739700A3B0A6 /* PetTeste.swift */; };
 		87A9D7C71B83577600C7CC06 /* PetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A9D7C61B83577600C7CC06 /* PetCell.xib */; };
 		F279737F601E0C6B1888DAC8 /* Pods_AppAnimal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		8757DFFE1B7A182100E1A59E /* ClientSW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSW.swift; sourceTree = "<group>"; };
 		87885BF51B7CBB4700664193 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		87885BF71B7CBD4000664193 /* ParseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseModels.swift; sourceTree = "<group>"; };
+		879967781BAA739700A3B0A6 /* PetTeste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTeste.swift; sourceTree = "<group>"; };
 		87A9D7C61B83577600C7CC06 /* PetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetCell.xib; sourceTree = "<group>"; };
 		88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAnimal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28D07534D1A5A18139FDC88 /* Pods-AppAnimal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAnimal.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppAnimal/Pods-AppAnimal.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				87885BF51B7CBB4700664193 /* Pet.swift */,
+				879967781BAA739700A3B0A6 /* PetTeste.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				6A0EEF8E1B88FEE800A61325 /* AWSServices.swift in Sources */,
 				875398ED1B70DF6C00752667 /* AppDelegate.swift in Sources */,
 				6A0EEF981B8950F500A61325 /* Alerta.swift in Sources */,
+				879967791BAA739700A3B0A6 /* PetTeste.swift in Sources */,
 				870B5A371B7E0ECE0087063C /* PetCell.swift in Sources */,
 				8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */,
 				8757DFFD1B7A164D00E1A59E /* GlobalVariables.swift in Sources */,

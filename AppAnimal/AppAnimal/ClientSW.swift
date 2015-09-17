@@ -180,6 +180,32 @@ class ClientWS{
     }
     
     
+    // Apagar pet
+    
+    func deletePet(idPet:Int){
+
+        makeDeleteCall(idPet)
+        
+    }
+    
+    func makeDeleteCall(idPet:Int){
+        
+        debugPrint(" url : \(GlobalVariables.sharedManager.URL_BASSE)pets/\(idPet)")
+        
+        Alamofire.request(.DELETE, GlobalVariables.sharedManager.URL_BASSE+"pets/\(idPet)") .responseJSON { (request, response, responseObject, error) in
+            if(error != nil){
+                debugPrint(" o Erro foi \(error)")
+            }else{
+                var json:JSON = JSON(responseObject!)
+                
+                //completionHandler(responseObject: pet, error: error)
+            }
+        }
+        
+        
+        
+    }
+    
     
     
     

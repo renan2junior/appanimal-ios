@@ -19,13 +19,15 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
         
         self.imagePicker.delegate = self
         
-        var error = NSErrorPointer()
-        if !NSFileManager.defaultManager().createDirectoryAtPath(
-            NSTemporaryDirectory().stringByAppendingPathComponent("upload"),
-            withIntermediateDirectories: true,
-            attributes: nil,
-            error: error) {
-                println("Creating 'upload' directory failed. Error: \(error)")
+        let error = NSErrorPointer()
+        do {
+            try NSFileManager.defaultManager().createDirectoryAtPath(
+                        NSTemporaryDirectory().stringByAppendingString("upload"),
+                        withIntermediateDirectories: true,
+                        attributes: nil)
+        } catch let error1 as NSError {
+            error.memory = error1
+                print("Creating 'upload' directory failed. Error: \(error)")
         }
 
         
@@ -49,7 +51,7 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
                 
                 Alerta.alerta("Imagem enviada", viewController: self)
                 
-                var pet = Pet()
+                let pet = Pet()
                 pet.imagem = urlImagem
                 pet.descricao = "teste"
                 pet.email = "a@a.com"
@@ -63,9 +65,9 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
     
     
     //Delegate
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-        var image = (info as NSDictionary).objectForKey(UIImagePickerControllerOriginalImage) as! UIImage
+        let image = (info as NSDictionary).objectForKey(UIImagePickerControllerOriginalImage) as! UIImage
         self.imgPet.image = image
         self.imagePicker.dismissViewControllerAnimated(true, completion: nil)
         

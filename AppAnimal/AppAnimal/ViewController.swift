@@ -21,30 +21,20 @@ class ViewController: UITableViewController {
     
     let parse:ParseModels = ParseModels()
     
-    var a : JSON = JSON.nullJSON
+    var a : JSON = JSON.null
     
     let textCellIdentifier = "cell"
     
     @IBOutlet weak var tablePet: UITableView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+       super.viewDidLoad()
         
-        var xib = UINib(nibName: "PetCell", bundle: nil)
-        self.tablePet.registerNib(xib, forCellReuseIdentifier: "cell")
+       let xib = UINib(nibName: "PetCell", bundle: nil)
+       self.tablePet.registerNib(xib, forCellReuseIdentifier: "cell")
         
-        // Criando um novo Pet
-        // OBS : POR ENQUANTO TEM QUE PREENCHER O OBJETO TODO
-        
-        classeTeste.PopulaPet()
-        
-        
-        // Apagando Registros
-        for var x:Int = 0 ; x <= 50; ++x{
-        //    self.ws.deletePet(x)
-        }
-        
-        
+     
+       // Pega os pets para popular a lista
        pegaListaPets()
         
        
@@ -61,69 +51,76 @@ class ViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        let pet : Pet = parse.parsePet(self.a[indexPath.row])
         
-        var pet : Pet = parse.parsePet(self.a[indexPath.row])
-        
-        debugPrint(" Cuidador : \(pet.cuidador)")
+        debugPrint(" Cuidador : \(pet.cuidador) - \(pet.pet_descricao) - \(pet.pet_nome)", terminator: "")
 
-        
-        var cell = self.tablePet.dequeueReusableCellWithIdentifier("cell") as! PetCell
+        let cell = self.tablePet.dequeueReusableCellWithIdentifier("cell") as! PetCell
         
         
         if(pet.cuidador == nil){
             pet.cuidador = "Vazio"
         }
         
-        cell.nome.text = pet.cuidador
+        if(pet.pet_descricao == nil){
+            pet.pet_descricao = pet.descricao
+        }
         
+        
+        cell.nome.text = pet.pet_nome
+              
+        loadImageAsync(pet.imagem, imageView: cell.imagePet)
         
         return cell
     
-    
     }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+      self.performSegueWithIdentifier("TelaDetalhe", sender: indexPath);
+        
+    }
+
+    
+    func loadImageAsync(stringURL: NSString, imageView: UIImageView, placeholder: UIImage! = nil) {
+        imageView.image = placeholder
+        
+        let url = NSURL(string: stringURL as String)
+        let requestedURL = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(requestedURL, queue: NSOperationQueue.mainQueue()) {
+            response, data, error in
+            
+            if data != nil {
+                imageView.image = UIImage(data: data!)
+            }
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
-   
-    func pegaDados2(){
-        
-        let retorno2 = ws.GetPets2()
-        
-        debugPrint(retorno2)
-       
-        
-    }
-    
+ 
     func pegaListaPets(){
         
-        ws.getPets({retorno, erro in
+        ws.getPets({retorno in
             
             self.a = retorno!
             
             self.tableView.reloadData()
+            
+            self.tableView.reloadInputViews()
         
-            println("Retorno \(retorno); erro = \(erro)")
+           
             return
         })
-        
+      
     }
     
     
-    func pegaPetByID(){
-        
-        ws.getPet("1", completionHandler: {retorno, erro in
-            
-            var pet:Pet = retorno
-            
-            println("Retorno \(retorno); Erro = \(erro)")
-            return
-        } )
-    }
-    
-
+   
 
 }
 

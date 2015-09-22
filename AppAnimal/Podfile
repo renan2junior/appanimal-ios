@@ -2,10 +2,9 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'AppAnimal' do
-	pod 'Alamofire', '1.2.3'
-	pod 'SwiftyJSON', '~> 2.2.1'
+	pod 'Alamofire', '2.0'
+	pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
     pod 'AWSCognito'
     pod 'AWSS3', '~> 2.2.0'
-    pod 'swift-serialize'
 	
 end

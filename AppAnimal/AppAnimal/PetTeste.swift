@@ -23,7 +23,7 @@ class PetTeste{
         
         var nome = ["Toto","Rex","Tiao","Mana","Sofia","Tor","Romario","Pele"]
         
-        var cuidador = ["Raul","Maria","Jose","Hannah","Bia","Paulo","Zico","Taina"]
+       
         
         var descricao = ["Quieto","Levado","Agitado","Docil","Dorminhoco","Agitado","Levado","Carinhoso"]
         

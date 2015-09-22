@@ -20,6 +20,7 @@
 		875399031B70DF6C00752667 /* AppAnimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875399021B70DF6C00752667 /* AppAnimalTests.swift */; };
 		8757DFFD1B7A164D00E1A59E /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFC1B7A164D00E1A59E /* GlobalVariables.swift */; };
 		8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFE1B7A182100E1A59E /* ClientSW.swift */; };
+		87809B451BB12ECE000E1F3A /* DetalhePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87809B441BB12ECE000E1F3A /* DetalhePet.swift */; settings = {ASSET_TAGS = (); }; };
 		87885BF61B7CBB4700664193 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87885BF51B7CBB4700664193 /* Pet.swift */; };
 		87885BF81B7CBD4000664193 /* ParseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87885BF71B7CBD4000664193 /* ParseModels.swift */; };
 		879967791BAA739700A3B0A6 /* PetTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879967781BAA739700A3B0A6 /* PetTeste.swift */; };
@@ -57,6 +58,7 @@
 		875399021B70DF6C00752667 /* AppAnimalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnimalTests.swift; sourceTree = "<group>"; };
 		8757DFFC1B7A164D00E1A59E /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		8757DFFE1B7A182100E1A59E /* ClientSW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSW.swift; sourceTree = "<group>"; };
+		87809B441BB12ECE000E1F3A /* DetalhePet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhePet.swift; sourceTree = "<group>"; };
 		87885BF51B7CBB4700664193 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		87885BF71B7CBD4000664193 /* ParseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseModels.swift; sourceTree = "<group>"; };
 		879967781BAA739700A3B0A6 /* PetTeste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTeste.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				870B5A361B7E0ECE0087063C /* PetCell.swift */,
 				87A9D7C61B83577600C7CC06 /* PetCell.xib */,
 				6A0EEF951B890D4A00A61325 /* CadastroViewController.swift */,
+				87809B441BB12ECE000E1F3A /* DetalhePet.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -274,7 +277,9 @@
 		875398DF1B70DF6C00752667 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = renanjunior;
 				TargetAttributes = {
 					875398E61B70DF6C00752667 = {
@@ -383,6 +388,7 @@
 				87885BF61B7CBB4700664193 /* Pet.swift in Sources */,
 				6A0EEF961B890D4A00A61325 /* CadastroViewController.swift in Sources */,
 				87885BF81B7CBD4000664193 /* ParseModels.swift in Sources */,
+				87809B451BB12ECE000E1F3A /* DetalhePet.swift in Sources */,
 				875398EF1B70DF6C00752667 /* ViewController.swift in Sources */,
 				6A0EEF8E1B88FEE800A61325 /* AWSServices.swift in Sources */,
 				875398ED1B70DF6C00752667 /* AppDelegate.swift in Sources */,
@@ -453,6 +459,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -468,7 +475,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -507,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -523,6 +530,7 @@
 				INFOPLIST_FILE = AppAnimal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "renan2junior.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AppAnimal/ObjectiveC-Bridging-Header.h";
 			};
@@ -536,6 +544,7 @@
 				INFOPLIST_FILE = AppAnimal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "renan2junior.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AppAnimal/ObjectiveC-Bridging-Header.h";
 			};
@@ -556,6 +565,7 @@
 				INFOPLIST_FILE = AppAnimalTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "renan2junior.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppAnimal.app/AppAnimal";
 			};
@@ -572,6 +582,7 @@
 				INFOPLIST_FILE = AppAnimalTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "renan2junior.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppAnimal.app/AppAnimal";
 			};

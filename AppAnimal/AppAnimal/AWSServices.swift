@@ -16,9 +16,9 @@ class AWSServices {
         
         
         let fileName = NSProcessInfo.processInfo().globallyUniqueString.stringByAppendingString(".png")
-        let filePath = NSTemporaryDirectory().stringByAppendingPathComponent("upload").stringByAppendingPathComponent(fileName)
+        let filePath = NSTemporaryDirectory().stringByAppendingString("upload").stringByAppendingString(fileName)
         let imageData = UIImagePNGRepresentation(image)
-        imageData.writeToFile(filePath, atomically: true)
+        imageData!.writeToFile(filePath, atomically: true)
         
         /*let testFileURL1 = NSURL(fileURLWithPath: NSTemporaryDirectory().stringByAppendingPathComponent("temp"))
         let data = UIImageJPEGRepresentation(image, 0.5)
@@ -41,27 +41,27 @@ class AWSServices {
                         case .Cancelled, .Paused:
                             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                 //self.collectionView.reloadData()
-                                println("upload() ok")
+                                print("upload() ok")
                             })
                             break;
                             
                         default:
-                            println("Erro case - upload() failed: [\(error)]")
+                            print("Erro case - upload() failed: [\(error)]")
                             callback(urlImagem: "", error: error)
                             break;
                         }
                     } else {
-                        println("Erro code - upload() failed: [\(error)]")
+                        print("Erro code - upload() failed: [\(error)]")
                         callback(urlImagem: "", error: error)
                     }
                 } else {
-                    println("Erro domain - upload() failed: [\(error)]")
+                    print("Erro domain - upload() failed: [\(error)]")
                     callback(urlImagem: "", error: error)
                 }
             }
             
             if let exception = task.exception {
-                println("upload() failed: [\(exception)]")
+                print("upload() failed: [\(exception)]")
             }
             
             if task.result != nil {
@@ -75,7 +75,7 @@ class AWSServices {
                     }*/
 
                     let urlImagem = "https://s3-sa-east-1.amazonaws.com/irmaoanimal/" + nomePet
-                    println(urlImagem)
+                    print(urlImagem)
                     
                     callback(urlImagem: urlImagem, error: nil)
                 })

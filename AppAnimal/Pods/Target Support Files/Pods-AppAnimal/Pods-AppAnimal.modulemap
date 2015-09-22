@@ -1,0 +1,6 @@
+framework module Pods_AppAnimal {
+  umbrella header "Pods-AppAnimal-umbrella.h"
+
+  export *
+  module * { export * }
+}

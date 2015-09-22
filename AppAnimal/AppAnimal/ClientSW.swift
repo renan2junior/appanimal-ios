@@ -12,7 +12,7 @@ import SwiftyJSON
 
 import Alamofire
 
-import Serialize
+
 
 
 //import ParseModels
@@ -77,7 +77,7 @@ Metodo DELETE
 class ClientWS{
     
     
-    var retorno:JSON = JSON.nullJSON
+    var retorno:JSON = JSON.null
     
     let parse:ParseModels = ParseModels()
 
@@ -87,20 +87,15 @@ class ClientWS{
     func GetPets2()->JSON{
         
         Alamofire.request(.GET, GlobalVariables.sharedManager.URL_BASSE+"pets", parameters: nil)
-            .responseJSON{(req, res, json, error) in
+            .responseJSON{(req, res, json) in
          
-                if(error != nil){
-                    println("ERRO")
-                }else{
-                    println("SUCESSO")
+                                 print("SUCESSO")
                     
-                    println(JSON(json!))
+                  //  print(JSON(json))
                     
-                    self.retorno = JSON(json!)
+                //   self.retorno = JSON(json)
                     
-                }
-                
-        }
+            }
         
         return self.retorno
     }
@@ -109,20 +104,22 @@ class ClientWS{
     
     // Retornar lista de Pets
     // Retorno Array
-    func getPets(completionHandler: (responseObject: JSON?, error: NSError?) -> ()) {
+    func getPets(completionHandler: (responseObject: JSON?) -> ()) {
         makeCall(completionHandler)
     }
     
-    func makeCall(completionHandler: (responseObject: JSON?, error: NSError?) -> ()) {
+    func makeCall(completionHandler: (responseObject: JSON?) -> ()) {
         
-        debugPrint(GlobalVariables.sharedManager.URL_BASSE+"pets")
+        debugPrint(GlobalVariables.sharedManager.URL_BASSE+"pets", terminator: "")
         
-        Alamofire.request(.GET, GlobalVariables.sharedManager.URL_BASSE+"pets", parameters: nil)
-            .responseJSON { request, response, responseObject, error in
+        let headers = ["Authorization":"Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==","Content-Type":"application/x-www-form-urlencoded"]
+        
+        Alamofire.request(.GET, GlobalVariables.sharedManager.URL_BASSE+"pets", headers:headers)
+            .responseJSON { _,  _, response in
                 
-                var json:JSON = JSON(responseObject!)
+                let json:JSON = JSON(response.value!)
                 
-                completionHandler(responseObject: json, error: error)
+                completionHandler(responseObject: json)
         }
     }
     
@@ -130,29 +127,26 @@ class ClientWS{
     
     // Retornar um Pet
     // Retorno JSON
-    func getPet(idpet:String,  completionHandler: (responseObject: Pet, error: NSError?) -> ()) {
+    func getPet(idpet:String,  completionHandler: (responseObject: Pet) -> ()) {
         makeCall(idpet, completionHandler: completionHandler)
     }
     
-    func makeCall(idpet:String, completionHandler: (responseObject: Pet, error: NSError?) -> ()) {
+    func makeCall(idpet:String, completionHandler: (responseObject: Pet) -> ()) {
         
-        debugPrint(GlobalVariables.sharedManager.URL_BASSE+"pets/\(idpet)")
+        debugPrint(GlobalVariables.sharedManager.URL_BASSE+"pets/\(idpet)", terminator: "")
         
         
         
         Alamofire.request(.GET, GlobalVariables.sharedManager.URL_BASSE+"pets/\(idpet)", parameters: nil)
-            .responseJSON { (request, response, responseObject, error) in
-                if(error != nil){
-                    debugPrint(" o Erro foi \(error)")
-                }else{
-                    var json:JSON = JSON(responseObject!)
+            .responseJSON { (request, response, responseObject) in
+                let json:JSON = JSON.null; // = JSON(responseObject!)
                     
                     // Chamando metodo para parsear o retorno
                     let pet:Pet = self.parse.parsePet(json)
                     
                     
-                    completionHandler(responseObject: pet, error: error)
-                }
+                    completionHandler(responseObject: pet)
+                
         }
     }
 
@@ -167,15 +161,10 @@ class ClientWS{
     func makePostCall(pet:Pet){
      
         Alamofire.request(.POST, GlobalVariables.sharedManager.URL_BASSE+"pets", parameters:pet.getString() , encoding: .JSON)
-            .responseJSON { (request, response, responseObject, error) in
-                if(error != nil){
-                    debugPrint(" o Erro foi \(error)")
-                }else{
-                    var json:JSON = JSON(responseObject!)
+            .responseJSON { (request, response, responseObject) in
+         //                          var json:JSON = JSON(responseObject!)
                     
-                    //completionHandler(responseObject: pet, error: error)
-                }
-        }
+                       }
         
     }
     
@@ -190,17 +179,12 @@ class ClientWS{
     
     func makeDeleteCall(idPet:Int){
         
-        debugPrint(" url : \(GlobalVariables.sharedManager.URL_BASSE)pets/\(idPet)")
+        debugPrint(" url : \(GlobalVariables.sharedManager.URL_BASSE)pets/\(idPet)", terminator: "")
         
-        Alamofire.request(.DELETE, GlobalVariables.sharedManager.URL_BASSE+"pets/\(idPet)") .responseJSON { (request, response, responseObject, error) in
-            if(error != nil){
-                debugPrint(" o Erro foi \(error)")
-            }else{
-                var json:JSON = JSON(responseObject!)
+        Alamofire.request(.DELETE, GlobalVariables.sharedManager.URL_BASSE+"pets/\(idPet)") .responseJSON { (request, response, responseObject) in
+             //              var json:JSON = JSON(responseObject!)
                 
-                //completionHandler(responseObject: pet, error: error)
-            }
-        }
+                     }
         
         
         

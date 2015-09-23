@@ -17,8 +17,7 @@ class DetalheViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         
     }
-    @IBAction func voltar(sender: AnyObject) {
-            
-        
+    @IBAction func toggleSideMenu(sender: AnyObject) {
+        toggleSideMenuView()
     }
 }

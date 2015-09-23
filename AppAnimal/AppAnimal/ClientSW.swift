@@ -108,7 +108,7 @@ class ClientWS{
     // Retornar lista de Pets filtrado por tipo
     // Retorno Array
     func getPetsByTipo(completionHandler: (responseObject: JSON?) -> (), tipo:String) {
-        makeCall(completionHandler)
+        makeCallTipo(completionHandler, tipo: tipo)
     }
     
     func makeCallTipo(completionHandler: (responseObject: JSON?) -> (), tipo:String) {

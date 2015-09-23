@@ -51,7 +51,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="swy-7i-nUA">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Zgg-BT-tEb">
+                        <barButtonItem key="leftBarButtonItem" image="osso4.png" id="Zgg-BT-tEb">
+                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="toggleSideMenu:" destination="K0D-b0-bLP" id="iwy-Og-roY"/>
                             </connections>
@@ -91,7 +92,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mapa" id="Qqp-RV-q8W">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="suM-6t-0ge">
+                        <barButtonItem key="leftBarButtonItem" image="osso4.png" id="suM-6t-0ge">
+                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="toggleSideMenu:" destination="cC4-2E-Myb" id="EC4-ye-bK5"/>
                             </connections>
@@ -165,7 +167,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detalhes" id="4Pe-fs-BgF">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="7o2-Xg-sKD">
+                        <barButtonItem key="leftBarButtonItem" image="osso4.png" id="7o2-Xg-sKD">
+                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="toggleSideMenu:" destination="QrU-j7-hCJ" id="pjJ-4g-COx"/>
                             </connections>
@@ -182,5 +185,6 @@
     </scenes>
     <resources>
         <image name="camera.png" width="300" height="300"/>
+        <image name="osso4.png" width="85" height="85"/>
     </resources>
 </document>

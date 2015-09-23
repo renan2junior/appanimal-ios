@@ -24,6 +24,7 @@
 		8756DCF11BB20D3800703C1C /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCF01BB20D3800703C1C /* MyMenuTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8756DCF31BB2149E00703C1C /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCF21BB2149E00703C1C /* BaseController.swift */; settings = {ASSET_TAGS = (); }; };
 		8756DCF51BB2328E00703C1C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCF41BB2328E00703C1C /* Video.swift */; settings = {ASSET_TAGS = (); }; };
+		8756DCF91BB23F8D00703C1C /* MapaPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCF81BB23F8D00703C1C /* MapaPet.swift */; settings = {ASSET_TAGS = (); }; };
 		8757DFFD1B7A164D00E1A59E /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFC1B7A164D00E1A59E /* GlobalVariables.swift */; };
 		8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFE1B7A182100E1A59E /* ClientSW.swift */; };
 		87809B451BB12ECE000E1F3A /* DetalhePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87809B441BB12ECE000E1F3A /* DetalhePet.swift */; settings = {ASSET_TAGS = (); }; };
@@ -68,6 +69,7 @@
 		8756DCF01BB20D3800703C1C /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		8756DCF21BB2149E00703C1C /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		8756DCF41BB2328E00703C1C /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		8756DCF81BB23F8D00703C1C /* MapaPet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaPet.swift; sourceTree = "<group>"; };
 		8757DFFC1B7A164D00E1A59E /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		8757DFFE1B7A182100E1A59E /* ClientSW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSW.swift; sourceTree = "<group>"; };
 		87809B441BB12ECE000E1F3A /* DetalhePet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhePet.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				6A0EEF951B890D4A00A61325 /* CadastroViewController.swift */,
 				87809B441BB12ECE000E1F3A /* DetalhePet.swift */,
 				8756DCF21BB2149E00703C1C /* BaseController.swift */,
+				8756DCF81BB23F8D00703C1C /* MapaPet.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				8756DCF11BB20D3800703C1C /* MyMenuTableViewController.swift in Sources */,
 				870B5A371B7E0ECE0087063C /* PetCell.swift in Sources */,
 				8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */,
+				8756DCF91BB23F8D00703C1C /* MapaPet.swift in Sources */,
 				8757DFFD1B7A164D00E1A59E /* GlobalVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

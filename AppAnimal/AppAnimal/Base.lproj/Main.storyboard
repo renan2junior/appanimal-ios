@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--My Navigation Controller-->
@@ -13,6 +14,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7hE-ix-pln">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="K0D-b0-bLP" kind="relationship" relationship="rootViewController" id="ecI-qh-lAC"/>
@@ -41,9 +43,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="219"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="cC4-2E-Myb" kind="show" identifier="DETALHE" id="ZV3-27-GNu"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -51,7 +50,13 @@
                             <outlet property="delegate" destination="K0D-b0-bLP" id="XQT-bm-JQT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="swy-7i-nUA"/>
+                    <navigationItem key="navigationItem" id="swy-7i-nUA">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Zgg-BT-tEb">
+                            <connections>
+                                <action selector="toggleSideMenu:" destination="K0D-b0-bLP" id="iwy-Og-roY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="tablePet" destination="OXv-sZ-bO2" id="VrN-PN-kgd"/>
@@ -64,7 +69,7 @@
         <!--Detalhes-->
         <scene sceneID="hnM-KQ-FIv">
             <objects>
-                <viewController storyboardIdentifier="TelaDetalhe" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cC4-2E-Myb" customClass="DetalheViewController" customModule="AppAnimal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapaPet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cC4-2E-Myb" customClass="MapaPet" customModule="AppAnimal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nz2-hb-fRU"/>
                         <viewControllerLayoutGuide type="bottom" id="X89-20-7kn"/>
@@ -72,10 +77,25 @@
                     <view key="view" contentMode="scaleToFill" id="eEP-qw-EEL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="61W-db-eyp">
+                                <rect key="frame" x="-4" y="64" width="328" height="367"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="61W-db-eyp" firstAttribute="leading" secondItem="eEP-qw-EEL" secondAttribute="leadingMargin" constant="-20" id="2MQ-3K-4Xn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="61W-db-eyp" secondAttribute="trailing" constant="-20" id="CTF-SV-Z2G"/>
+                            <constraint firstItem="X89-20-7kn" firstAttribute="top" secondItem="61W-db-eyp" secondAttribute="bottom" id="Gg5-rF-DOb"/>
+                            <constraint firstItem="61W-db-eyp" firstAttribute="top" secondItem="Nz2-hb-fRU" secondAttribute="bottom" id="gba-ru-KF3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detalhes" id="Qqp-RV-q8W">
-                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="suM-6t-0ge"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="suM-6t-0ge">
+                            <connections>
+                                <action selector="toggleSideMenu:" destination="cC4-2E-Myb" id="EC4-ye-bK5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -83,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cy3-1A-JpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="794"/>
+            <point key="canvasLocation" x="997" y="770"/>
         </scene>
         <!--Cadastro View Controller-->
         <scene sceneID="uaY-VW-egX">

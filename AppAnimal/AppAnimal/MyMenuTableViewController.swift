@@ -90,19 +90,19 @@ class MyMenuTableViewController: UITableViewController {
         switch (indexPath.row) {
         case 0:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ControllerPrincipal")
-            destViewController.title = "cachorro"
+            destViewController.title = "Cachorro"
             break
         case 1:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ControllerPrincipal")
-            destViewController.title = "gato"
+            destViewController.title = "Gato"
             break
         case 2:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ControllerPrincipal")
-            destViewController.title = "passaro"
+            destViewController.title = "Passaro"
             break
         case 3:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ControllerPrincipal")
-            destViewController.title = "outros"
+            destViewController.title = "Outros"
             break
         case 4:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ControllerPrincipal")
@@ -112,7 +112,8 @@ class MyMenuTableViewController: UITableViewController {
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ControllerCadastro")
             break
         default:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ControllerPrincipal")
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MapaPet")
+            destViewController.title = "Mapa"
             break
         }
         sideMenuController()?.setContentViewController(destViewController)

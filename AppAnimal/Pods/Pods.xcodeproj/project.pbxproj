@@ -103,6 +103,7 @@
 		85B4A818C16A75D420523D4C12E7FE84 /* AWSCognitoSyncService.h in Headers */ = {isa = PBXBuildFile; fileRef = 98E8EB765D362067B9C1DAD257323609 /* AWSCognitoSyncService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85B6D9357D6C35CFC54435113C2F7CFB /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98AD15142C0E626CB723E0BDD88C7B92 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8701210C4AC9F573FF53CB7A54AA0612 /* AWSXMLWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C28B20D174E30BFEE8E71BD92F9C11 /* AWSXMLWriter.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		8756DCF71BB23EE100703C1C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8756DCF61BB23EE100703C1C /* MapKit.framework */; };
 		8D7A9186F70DCAD00BA0AE1A8A9862F0 /* AWSExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEDFDE569A37EC89A04267F5876DB7E /* AWSExecutor.m */; };
 		8DDA95C2E0A8E7A7E17FDE193B4BFF4A /* AWSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DA45C277E1B97C603D8E41F3EF8C4 /* AWSReachability.m */; };
 		8E4775C966A7A3B3459615A23B4DF988 /* AWSSTSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7259DC84C8C50D567C1587BE4FE905B7 /* AWSSTSModel.m */; };
@@ -365,6 +366,7 @@
 		82E2D3B8A0A86DF5C1533078F0FC7AE9 /* AWSURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSURLSessionManager.m; path = AWSCore/Networking/AWSURLSessionManager.m; sourceTree = "<group>"; };
 		84C83FA70B5FCA1D2F6BBA374EEA6374 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		85E62DA073C367ACFC8C77B0B6180FD1 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		8756DCF61BB23EE100703C1C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		8A05DB34CD8152A4423E0F9540150106 /* AWSService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSService.m; path = AWSCore/Service/AWSService.m; sourceTree = "<group>"; };
 		8AD93DB8D0E545BA6035E011F94A8D0D /* AWSReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSReachability.h; path = AWSCore/Reachability/AWSReachability.h; sourceTree = "<group>"; };
 		8C3E6024421B3555F1E354F14A117008 /* AWSCognitoIdentityModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSCognitoIdentityModel.h; path = AWSCore/CognitoIdentity/AWSCognitoIdentityModel.h; sourceTree = "<group>"; };
@@ -506,6 +508,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8756DCF71BB23EE100703C1C /* MapKit.framework in Frameworks */,
 				BC03E0C15B29D5568D6D4B6D31601AF0 /* AWSCore.framework in Frameworks */,
 				1B1578222D082E156448DDE75A3C2C2D /* Foundation.framework in Frameworks */,
 			);
@@ -590,6 +593,7 @@
 		737B752A69510DD648696CE7C44BA1E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8756DCF61BB23EE100703C1C /* MapKit.framework */,
 				0837BA8568DFD3854C4F84E30ED6E0A6 /* AWSCore.framework */,
 				8894936465D9BC50C684CA30EA01AFEC /* iOS */,
 			);

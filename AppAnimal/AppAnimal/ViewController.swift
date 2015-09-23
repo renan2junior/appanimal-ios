@@ -65,6 +65,10 @@ class ViewController: UITableViewController {
     
     }
     
+    @IBAction func toggleSideMenu(sender: AnyObject) {
+        toggleSideMenuView()
+    }
+    
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -155,7 +159,7 @@ class ViewController: UITableViewController {
     func pegaListaPetsByTipo(){
         
         if(self.title==nil){
-            self.title = "cachorro"
+            self.title = "Cachorro"
         }
         
         ws.getPetsByTipo({retorno in
@@ -168,7 +172,7 @@ class ViewController: UITableViewController {
             
             
             return
-        }, tipo: self.title!)
+        }, tipo: (self.title?.lowercaseString)!)
         
     }
 

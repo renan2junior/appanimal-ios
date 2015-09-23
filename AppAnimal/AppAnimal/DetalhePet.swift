@@ -16,7 +16,9 @@ class DetalheViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+    }
+    @IBAction func voltar(sender: AnyObject) {
+            
         
     }
 }

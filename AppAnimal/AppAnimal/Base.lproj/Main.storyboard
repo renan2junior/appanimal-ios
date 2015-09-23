@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--My Navigation Controller-->
         <scene sceneID="eLZ-J9-TyY">
             <objects>
-                <navigationController id="D1m-7C-Pfd" sceneMemberID="viewController">
+                <navigationController id="D1m-7C-Pfd" customClass="MyNavigationController" customModule="AppAnimal" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7hE-ix-pln">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -20,12 +20,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qg4-yp-5I6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="316.5" y="342"/>
+            <point key="canvasLocation" x="398" y="216"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bvd-f3-jcE">
             <objects>
-                <tableViewController id="K0D-b0-bLP" customClass="ViewController" customModule="AppAnimal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ControllerPrincipal" id="K0D-b0-bLP" customClass="ViewController" customModule="AppAnimal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="220" sectionHeaderHeight="22" sectionFooterHeight="22" id="OXv-sZ-bO2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,15 +34,15 @@
                         <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="2" indentationWidth="12" shouldIndentWhileEditing="NO" reuseIdentifier="cell" rowHeight="220" id="cNd-Ol-J1R" customClass="PetCell" customModule="AppAnimal" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationLevel="2" indentationWidth="12" shouldIndentWhileEditing="NO" reuseIdentifier="cell" rowHeight="220" id="cNd-Ol-J1R" customClass="PetCell" customModule="AppAnimal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="320" height="220"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cNd-Ol-J1R" id="rkx-Km-6F4">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="219"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="219"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="cC4-2E-Myb" kind="showDetail" id="MyA-Ei-Oqb"/>
+                                    <segue destination="cC4-2E-Myb" kind="show" identifier="DETALHE" id="ZV3-27-GNu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -51,13 +51,7 @@
                             <outlet property="delegate" destination="K0D-b0-bLP" id="XQT-bm-JQT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="swy-7i-nUA">
-                        <barButtonItem key="rightBarButtonItem" title="Adicionar" id="rXo-fO-YbU">
-                            <connections>
-                                <segue destination="D1e-6m-YbM" kind="show" id="v91-v7-Lf4"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="swy-7i-nUA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="tablePet" destination="OXv-sZ-bO2" id="VrN-PN-kgd"/>
@@ -65,9 +59,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgU-dX-5fk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846" y="231"/>
+            <point key="canvasLocation" x="814" y="216"/>
         </scene>
-        <!--Detalhe View Controller-->
+        <!--Detalhes-->
         <scene sceneID="hnM-KQ-FIv">
             <objects>
                 <viewController storyboardIdentifier="TelaDetalhe" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cC4-2E-Myb" customClass="DetalheViewController" customModule="AppAnimal" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,16 +74,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Detalhes" id="Qqp-RV-q8W">
+                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="suM-6t-0ge"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cy3-1A-JpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="822"/>
+            <point key="canvasLocation" x="814" y="794"/>
         </scene>
         <!--Cadastro View Controller-->
         <scene sceneID="uaY-VW-egX">
             <objects>
-                <viewController id="D1e-6m-YbM" customClass="CadastroViewController" customModule="AppAnimal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ControllerCadastro" id="D1e-6m-YbM" customClass="CadastroViewController" customModule="AppAnimal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Waf-92-RzU"/>
                         <viewControllerLayoutGuide type="bottom" id="uCM-12-yXN"/>
@@ -130,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cK-ol-4fg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1261" y="236"/>
+            <point key="canvasLocation" x="1192" y="229"/>
         </scene>
     </scenes>
     <resources>

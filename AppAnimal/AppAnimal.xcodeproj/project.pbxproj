@@ -18,6 +18,12 @@
 		875398F41B70DF6C00752667 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875398F31B70DF6C00752667 /* Images.xcassets */; };
 		875398F71B70DF6C00752667 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 875398F51B70DF6C00752667 /* LaunchScreen.xib */; };
 		875399031B70DF6C00752667 /* AppAnimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875399021B70DF6C00752667 /* AppAnimalTests.swift */; };
+		8756DCEC1BB20D0400703C1C /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCEA1BB20D0400703C1C /* ENSideMenu.swift */; settings = {ASSET_TAGS = (); }; };
+		8756DCED1BB20D0400703C1C /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCEB1BB20D0400703C1C /* ENSideMenuNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
+		8756DCEF1BB20D1500703C1C /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCEE1BB20D1500703C1C /* MyNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
+		8756DCF11BB20D3800703C1C /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCF01BB20D3800703C1C /* MyMenuTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8756DCF31BB2149E00703C1C /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCF21BB2149E00703C1C /* BaseController.swift */; settings = {ASSET_TAGS = (); }; };
+		8756DCF51BB2328E00703C1C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCF41BB2328E00703C1C /* Video.swift */; settings = {ASSET_TAGS = (); }; };
 		8757DFFD1B7A164D00E1A59E /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFC1B7A164D00E1A59E /* GlobalVariables.swift */; };
 		8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFE1B7A182100E1A59E /* ClientSW.swift */; };
 		87809B451BB12ECE000E1F3A /* DetalhePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87809B441BB12ECE000E1F3A /* DetalhePet.swift */; settings = {ASSET_TAGS = (); }; };
@@ -56,6 +62,12 @@
 		875398FC1B70DF6C00752667 /* AppAnimalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppAnimalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		875399011B70DF6C00752667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		875399021B70DF6C00752667 /* AppAnimalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnimalTests.swift; sourceTree = "<group>"; };
+		8756DCEA1BB20D0400703C1C /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		8756DCEB1BB20D0400703C1C /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
+		8756DCEE1BB20D1500703C1C /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		8756DCF01BB20D3800703C1C /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
+		8756DCF21BB2149E00703C1C /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		8756DCF41BB2328E00703C1C /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		8757DFFC1B7A164D00E1A59E /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		8757DFFE1B7A182100E1A59E /* ClientSW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSW.swift; sourceTree = "<group>"; };
 		87809B441BB12ECE000E1F3A /* DetalhePet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhePet.swift; sourceTree = "<group>"; };
@@ -150,6 +162,7 @@
 		875398E91B70DF6C00752667 /* AppAnimal */ = {
 			isa = PBXGroup;
 			children = (
+				8756DCE91BB20CEB00703C1C /* Library */,
 				8757E0031B7A185C00E1A59E /* Delegate */,
 				8757E0021B7A184400E1A59E /* Controller */,
 				8757E0011B7A183B00E1A59E /* Models */,
@@ -191,6 +204,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8756DCE91BB20CEB00703C1C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				8756DCEA1BB20D0400703C1C /* ENSideMenu.swift */,
+				8756DCEB1BB20D0400703C1C /* ENSideMenuNavigationController.swift */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		8757E0001B7A182C00E1A59E /* WS */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +228,7 @@
 			children = (
 				87885BF51B7CBB4700664193 /* Pet.swift */,
 				879967781BAA739700A3B0A6 /* PetTeste.swift */,
+				8756DCF41BB2328E00703C1C /* Video.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -213,11 +236,14 @@
 		8757E0021B7A184400E1A59E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8756DCF01BB20D3800703C1C /* MyMenuTableViewController.swift */,
+				8756DCEE1BB20D1500703C1C /* MyNavigationController.swift */,
 				875398EE1B70DF6C00752667 /* ViewController.swift */,
 				870B5A361B7E0ECE0087063C /* PetCell.swift */,
 				87A9D7C61B83577600C7CC06 /* PetCell.xib */,
 				6A0EEF951B890D4A00A61325 /* CadastroViewController.swift */,
 				87809B441BB12ECE000E1F3A /* DetalhePet.swift */,
+				8756DCF21BB2149E00703C1C /* BaseController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -388,12 +414,18 @@
 				87885BF61B7CBB4700664193 /* Pet.swift in Sources */,
 				6A0EEF961B890D4A00A61325 /* CadastroViewController.swift in Sources */,
 				87885BF81B7CBD4000664193 /* ParseModels.swift in Sources */,
+				8756DCEF1BB20D1500703C1C /* MyNavigationController.swift in Sources */,
+				8756DCEC1BB20D0400703C1C /* ENSideMenu.swift in Sources */,
 				87809B451BB12ECE000E1F3A /* DetalhePet.swift in Sources */,
 				875398EF1B70DF6C00752667 /* ViewController.swift in Sources */,
+				8756DCF31BB2149E00703C1C /* BaseController.swift in Sources */,
 				6A0EEF8E1B88FEE800A61325 /* AWSServices.swift in Sources */,
 				875398ED1B70DF6C00752667 /* AppDelegate.swift in Sources */,
 				6A0EEF981B8950F500A61325 /* Alerta.swift in Sources */,
 				879967791BAA739700A3B0A6 /* PetTeste.swift in Sources */,
+				8756DCED1BB20D0400703C1C /* ENSideMenuNavigationController.swift in Sources */,
+				8756DCF51BB2328E00703C1C /* Video.swift in Sources */,
+				8756DCF11BB20D3800703C1C /* MyMenuTableViewController.swift in Sources */,
 				870B5A371B7E0ECE0087063C /* PetCell.swift in Sources */,
 				8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */,
 				8757DFFD1B7A164D00E1A59E /* GlobalVariables.swift in Sources */,

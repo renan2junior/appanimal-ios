@@ -82,24 +82,6 @@ class ClientWS{
     let parse:ParseModels = ParseModels()
 
    
-    // Retornar lista de Pets
-    // Retorno JSON
-    func GetPets2()->JSON{
-        
-        Alamofire.request(.GET, GlobalVariables.sharedManager.URL_BASSE+"pets", parameters: nil)
-            .responseJSON{(req, res, json) in
-         
-                                 print("SUCESSO")
-                    
-                  //  print(JSON(json))
-                    
-                //   self.retorno = JSON(json)
-                    
-            }
-        
-        return self.retorno
-    }
-    
     
     
     // Retornar lista de Pets
@@ -123,7 +105,27 @@ class ClientWS{
         }
     }
     
+    // Retornar lista de Pets filtrado por tipo
+    // Retorno Array
+    func getPetsByTipo(completionHandler: (responseObject: JSON?) -> (), tipo:String) {
+        makeCall(completionHandler)
+    }
     
+    func makeCallTipo(completionHandler: (responseObject: JSON?) -> (), tipo:String) {
+        
+        debugPrint(GlobalVariables.sharedManager.URL_BASSE+"pets/tipo/\(tipo)", terminator: "")
+        
+        let headers = ["Authorization":"Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==","Content-Type":"application/x-www-form-urlencoded"]
+        
+        Alamofire.request(.GET, GlobalVariables.sharedManager.URL_BASSE+"pets/tipo/\(tipo)", headers:headers)
+            .responseJSON { _,  _, response in
+                
+                let json:JSON = JSON(response.value!)
+                
+                completionHandler(responseObject: json)
+        }
+    }
+
     
     // Retornar um Pet
     // Retorno JSON
@@ -149,6 +151,8 @@ class ClientWS{
                 
         }
     }
+    
+    
 
     // Salvar um Pet
     // Retorna JSON

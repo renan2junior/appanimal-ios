@@ -14,7 +14,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7hE-ix-pln">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20594521262648069" green="0.45408205725488882" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="K0D-b0-bLP" kind="relationship" relationship="rootViewController" id="ecI-qh-lAC"/>
@@ -51,8 +51,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="swy-7i-nUA">
-                        <barButtonItem key="leftBarButtonItem" image="osso4.png" id="Zgg-BT-tEb">
-                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="leftBarButtonItem" image="osso5.png" id="Zgg-BT-tEb">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="toggleSideMenu:" destination="K0D-b0-bLP" id="iwy-Og-roY"/>
                             </connections>
@@ -92,8 +92,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mapa" id="Qqp-RV-q8W">
-                        <barButtonItem key="leftBarButtonItem" image="osso4.png" id="suM-6t-0ge">
-                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="leftBarButtonItem" image="osso5.png" style="plain" id="suM-6t-0ge">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="toggleSideMenu:" destination="cC4-2E-Myb" id="EC4-ye-bK5"/>
                             </connections>
@@ -167,8 +167,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detalhes" id="4Pe-fs-BgF">
-                        <barButtonItem key="leftBarButtonItem" image="osso4.png" id="7o2-Xg-sKD">
-                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="leftBarButtonItem" image="osso5.png" id="7o2-Xg-sKD">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="toggleSideMenu:" destination="QrU-j7-hCJ" id="pjJ-4g-COx"/>
                             </connections>
@@ -185,6 +185,6 @@
     </scenes>
     <resources>
         <image name="camera.png" width="300" height="300"/>
-        <image name="osso4.png" width="85" height="85"/>
+        <image name="osso5.png" width="57" height="57"/>
     </resources>
 </document>

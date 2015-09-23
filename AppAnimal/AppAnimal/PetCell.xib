@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W6D-3w-A6U">
-                        <rect key="frame" x="0.0" y="0.0" width="330" height="182"/>
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="224"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="6"/>
@@ -29,18 +29,20 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaI-wJ-Fjn">
-                        <rect key="frame" x="82" y="190" width="166" height="21"/>
+                    <label userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaI-wJ-Fjn">
+                        <rect key="frame" x="0.0" y="179" width="330" height="45"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <attributedString key="attributedText">
                             <fragment content="Nome">
                                 <attributes>
                                     <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <font key="NSFont" size="16" name="Seravek-BoldItalic"/>
+                                    <font key="NSFont" size="22" name="Seravek-BoldItalic"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
-                        <nil key="highlightedColor"/>
+                        <color key="highlightedColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="shadowColor" red="0.20594521260000001" green="0.45408205730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

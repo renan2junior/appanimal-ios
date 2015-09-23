@@ -62,13 +62,24 @@ class ViewController: UITableViewController {
         
         self.listaVideo = [v1,v2,v3,v4]
         
+        
+        
+        let label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        label.center = CGPointMake(160, 284)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = self.title
+        label.textColor = UIColor.whiteColor()
+        label.font = UIFont.boldSystemFontOfSize(30.0)
+        self.navigationItem.titleView = label
+        
+        
     
     }
     
     @IBAction func toggleSideMenu(sender: AnyObject) {
         toggleSideMenuView()
     }
-    
+
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

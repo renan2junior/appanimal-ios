@@ -11,6 +11,12 @@
 		6A0EEF941B890BF800A61325 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A0EEF931B890BF800A61325 /* camera.png */; };
 		6A0EEF961B890D4A00A61325 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0EEF951B890D4A00A61325 /* CadastroViewController.swift */; };
 		6A0EEF981B8950F500A61325 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0EEF971B8950F400A61325 /* Alerta.swift */; };
+		6A3F11901BB36FEB000810E0 /* Checked-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3F118B1BB36FEB000810E0 /* Checked-25.png */; settings = {ASSET_TAGS = (); }; };
+		6A3F11911BB36FEB000810E0 /* Checked-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3F118C1BB36FEB000810E0 /* Checked-32.png */; settings = {ASSET_TAGS = (); }; };
+		6A3F11921BB36FEB000810E0 /* Checked-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3F118D1BB36FEB000810E0 /* Checked-50.png */; settings = {ASSET_TAGS = (); }; };
+		6A3F11931BB36FEB000810E0 /* img-fundo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3F118E1BB36FEB000810E0 /* img-fundo.png */; settings = {ASSET_TAGS = (); }; };
+		6A3F11941BB36FEB000810E0 /* pets.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3F118F1BB36FEB000810E0 /* pets.png */; settings = {ASSET_TAGS = (); }; };
+		6ABF9EC21BB3831300F69100 /* dog.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6ABF9EC11BB3831300F69100 /* dog.jpeg */; settings = {ASSET_TAGS = (); }; };
 		870B5A371B7E0ECE0087063C /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870B5A361B7E0ECE0087063C /* PetCell.swift */; };
 		875398ED1B70DF6C00752667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875398EC1B70DF6C00752667 /* AppDelegate.swift */; };
 		875398EF1B70DF6C00752667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875398EE1B70DF6C00752667 /* ViewController.swift */; };
@@ -53,6 +59,12 @@
 		6A0EEF931B890BF800A61325 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		6A0EEF951B890D4A00A61325 /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		6A0EEF971B8950F400A61325 /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
+		6A3F118B1BB36FEB000810E0 /* Checked-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked-25.png"; sourceTree = "<group>"; };
+		6A3F118C1BB36FEB000810E0 /* Checked-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked-32.png"; sourceTree = "<group>"; };
+		6A3F118D1BB36FEB000810E0 /* Checked-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked-50.png"; sourceTree = "<group>"; };
+		6A3F118E1BB36FEB000810E0 /* img-fundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-fundo.png"; sourceTree = "<group>"; };
+		6A3F118F1BB36FEB000810E0 /* pets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets.png; sourceTree = "<group>"; };
+		6ABF9EC11BB3831300F69100 /* dog.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpeg; sourceTree = "<group>"; };
 		80368B6E0D8BA2B664704A66 /* Pods-AppAnimal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAnimal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppAnimal/Pods-AppAnimal.debug.xcconfig"; sourceTree = "<group>"; };
 		870B5A361B7E0ECE0087063C /* PetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
 		875398E71B70DF6C00752667 /* AppAnimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppAnimal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +144,12 @@
 		6A0EEF921B890BF800A61325 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				6ABF9EC11BB3831300F69100 /* dog.jpeg */,
+				6A3F118B1BB36FEB000810E0 /* Checked-25.png */,
+				6A3F118C1BB36FEB000810E0 /* Checked-32.png */,
+				6A3F118D1BB36FEB000810E0 /* Checked-50.png */,
+				6A3F118E1BB36FEB000810E0 /* img-fundo.png */,
+				6A3F118F1BB36FEB000810E0 /* pets.png */,
 				8756DD081BB25A0400703C1C /* osso5.png */,
 				8756DD061BB2567500703C1C /* osso4.png */,
 				6A0EEF931B890BF800A61325 /* camera.png */,
@@ -354,9 +372,15 @@
 				87A9D7C71B83577600C7CC06 /* PetCell.xib in Resources */,
 				8756DD071BB2567500703C1C /* osso4.png in Resources */,
 				875398F71B70DF6C00752667 /* LaunchScreen.xib in Resources */,
+				6A3F11901BB36FEB000810E0 /* Checked-25.png in Resources */,
 				875398F41B70DF6C00752667 /* Images.xcassets in Resources */,
+				6A3F11921BB36FEB000810E0 /* Checked-50.png in Resources */,
 				8756DD091BB25A0400703C1C /* osso5.png in Resources */,
 				6A0EEF941B890BF800A61325 /* camera.png in Resources */,
+				6ABF9EC21BB3831300F69100 /* dog.jpeg in Resources */,
+				6A3F11911BB36FEB000810E0 /* Checked-32.png in Resources */,
+				6A3F11931BB36FEB000810E0 /* img-fundo.png in Resources */,
+				6A3F11941BB36FEB000810E0 /* pets.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +595,7 @@
 			baseConfigurationReference = 80368B6E0D8BA2B664704A66 /* Pods-AppAnimal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = AppAnimal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -585,6 +610,7 @@
 			baseConfigurationReference = F28D07534D1A5A18139FDC88 /* Pods-AppAnimal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = AppAnimal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

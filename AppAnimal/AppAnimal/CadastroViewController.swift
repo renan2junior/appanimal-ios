@@ -9,10 +9,16 @@
 import UIKit
 import AWSS3
 
-class CadastroViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CadastroViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet var imgPet: UIImageView!
     var imagePicker = UIImagePickerController()
+    var pickerView:UIPickerView!
+    
+    
+    @IBOutlet weak var txtTipoIdade: UITextField!
+    
+    var pickTipoIdade = ["ano", "mês", "dia"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +35,17 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
             error.memory = error1
                 print("Creating 'upload' directory failed. Error: \(error)")
         }
+        
+        self.pickerView = UIPickerView()
+        pickerView.delegate = self
+        txtTipoIdade.inputView = pickerView
 
         
     }
     
+    @IBAction func toggleSideMenu(sender: AnyObject) {
+        toggleSideMenuView()
+    }
     
     @IBAction func uploadImagem(sender: AnyObject) {
         
@@ -77,5 +90,22 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
         
         self.imagePicker.dismissViewControllerAnimated(true, completion: nil)
         
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickTipoIdade.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickTipoIdade[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        txtTipoIdade.text = pickTipoIdade[row]
+        txtTipoIdade.resignFirstResponder()
     }
 }

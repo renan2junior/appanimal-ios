@@ -7,52 +7,28 @@
 //
 
 import Foundation
-
 import SwiftyJSON
 
-
 class ParseModels{
-    
     
     // Parse de um objeto JSON para o objet Pet
     func parsePet(json:JSON)->Pet{
      
-      
         let pet:Pet = Pet()
-        
         pet.descricao = json["pet_descricao"].stringValue
         pet.cuidador = json["cuidador"].stringValue
         pet.email = json["email"].stringValue
         pet.imagem = json["imagem"].stringValue
         pet.pet_nome = json["pet_nome"].stringValue
-        
-        
         return pet
-        
     }
     
     func parsePetLis(json:JSON)->Array<Pet>{
-        
         var pets = Array<Pet>()
-        
         for(var x = 0 ; x<=json.count; x++){
-            
             let pet = parsePet(json[x])
-            
             pets.append(pet)
-            
         }
-        
-        
-        
-        
         return pets
-        
     }
-
-
-
-    
-    
-    
 }

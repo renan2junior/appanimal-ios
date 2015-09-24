@@ -35,12 +35,9 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
             error.memory = error1
                 print("Creating 'upload' directory failed. Error: \(error)")
         }
-        
         self.pickerView = UIPickerView()
         pickerView.delegate = self
         txtTipoIdade.inputView = pickerView
-
-        
     }
     
     @IBAction func toggleSideMenu(sender: AnyObject) {
@@ -48,33 +45,19 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func uploadImagem(sender: AnyObject) {
-        
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         self.presentViewController(imagePicker, animated: true, completion: nil)
-        
-    }
+     }
     
     @IBAction func salvar(sender: AnyObject) {
-        
-        AWSServices.upload(self.imgPet.image!, callback: { (urlImagem: String, error: NSError!) in
-            
-            if (error != nil) {
+         AWSServices.upload(self.imgPet.image!, callback: { (urlImagem: String, error: NSError!) in
+             if (error != nil) {
                 Alerta.alerta("Erro ao fazer upload da imagem! Error: " + error.description, viewController: self)
             } else {
-                
-                Alerta.alerta("Imagem enviada", viewController: self)
-                
-                let pet = Pet()
-                pet.imagem = urlImagem
-                pet.descricao = "teste"
-                pet.email = "a@a.com"
-                pet.cuidador = "Joao"
-                
-            }
+                 Alerta.alerta("Imagem enviada", viewController: self)
+             }
         })
-        
-        
-    }
+     }
     
     
     //Delegate

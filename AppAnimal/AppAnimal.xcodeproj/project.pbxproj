@@ -24,6 +24,10 @@
 		875398F41B70DF6C00752667 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875398F31B70DF6C00752667 /* Images.xcassets */; };
 		875398F71B70DF6C00752667 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 875398F51B70DF6C00752667 /* LaunchScreen.xib */; };
 		875399031B70DF6C00752667 /* AppAnimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875399021B70DF6C00752667 /* AppAnimalTests.swift */; };
+		8753FFBB1BB39DFD00ABFAEA /* osso.png in Resources */ = {isa = PBXBuildFile; fileRef = 8753FFB71BB39DFD00ABFAEA /* osso.png */; settings = {ASSET_TAGS = (); }; };
+		8753FFBC1BB39DFD00ABFAEA /* bones-307870_640.png in Resources */ = {isa = PBXBuildFile; fileRef = 8753FFB81BB39DFD00ABFAEA /* bones-307870_640.png */; settings = {ASSET_TAGS = (); }; };
+		8753FFBD1BB39DFD00ABFAEA /* th-Cartoon-Bone.png in Resources */ = {isa = PBXBuildFile; fileRef = 8753FFB91BB39DFD00ABFAEA /* th-Cartoon-Bone.png */; settings = {ASSET_TAGS = (); }; };
+		8753FFBE1BB39DFD00ABFAEA /* Osso_de_Chafer.png in Resources */ = {isa = PBXBuildFile; fileRef = 8753FFBA1BB39DFD00ABFAEA /* Osso_de_Chafer.png */; settings = {ASSET_TAGS = (); }; };
 		8756DCEC1BB20D0400703C1C /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCEA1BB20D0400703C1C /* ENSideMenu.swift */; settings = {ASSET_TAGS = (); }; };
 		8756DCED1BB20D0400703C1C /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCEB1BB20D0400703C1C /* ENSideMenuNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
 		8756DCEF1BB20D1500703C1C /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCEE1BB20D1500703C1C /* MyNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -77,6 +81,10 @@
 		875398FC1B70DF6C00752667 /* AppAnimalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppAnimalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		875399011B70DF6C00752667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		875399021B70DF6C00752667 /* AppAnimalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnimalTests.swift; sourceTree = "<group>"; };
+		8753FFB71BB39DFD00ABFAEA /* osso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = osso.png; sourceTree = "<group>"; };
+		8753FFB81BB39DFD00ABFAEA /* bones-307870_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bones-307870_640.png"; sourceTree = "<group>"; };
+		8753FFB91BB39DFD00ABFAEA /* th-Cartoon-Bone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "th-Cartoon-Bone.png"; sourceTree = "<group>"; };
+		8753FFBA1BB39DFD00ABFAEA /* Osso_de_Chafer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Osso_de_Chafer.png; sourceTree = "<group>"; };
 		8756DCEA1BB20D0400703C1C /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
 		8756DCEB1BB20D0400703C1C /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		8756DCEE1BB20D1500703C1C /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
@@ -136,6 +144,10 @@
 		6A0EEF911B890BF800A61325 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8753FFB71BB39DFD00ABFAEA /* osso.png */,
+				8753FFB81BB39DFD00ABFAEA /* bones-307870_640.png */,
+				8753FFB91BB39DFD00ABFAEA /* th-Cartoon-Bone.png */,
+				8753FFBA1BB39DFD00ABFAEA /* Osso_de_Chafer.png */,
 				6A0EEF921B890BF800A61325 /* imagens */,
 			);
 			path = Resources;
@@ -160,6 +172,7 @@
 		6A0EEF991B8950FA00A61325 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				879967781BAA739700A3B0A6 /* PetTeste.swift */,
 				6A0EEF971B8950F400A61325 /* Alerta.swift */,
 			);
 			name = Util;
@@ -188,6 +201,7 @@
 		875398E91B70DF6C00752667 /* AppAnimal */ = {
 			isa = PBXGroup;
 			children = (
+				8753FFB61BB39AAE00ABFAEA /* Cell */,
 				8756DCE91BB20CEB00703C1C /* Library */,
 				8757E0031B7A185C00E1A59E /* Delegate */,
 				8757E0021B7A184400E1A59E /* Controller */,
@@ -230,6 +244,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8753FFB61BB39AAE00ABFAEA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				87A9D7C61B83577600C7CC06 /* PetCell.xib */,
+				870B5A361B7E0ECE0087063C /* PetCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		8756DCE91BB20CEB00703C1C /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				87885BF51B7CBB4700664193 /* Pet.swift */,
-				879967781BAA739700A3B0A6 /* PetTeste.swift */,
 				8756DCF41BB2328E00703C1C /* Video.swift */,
 			);
 			name = Models;
@@ -265,8 +287,6 @@
 				8756DCF01BB20D3800703C1C /* MyMenuTableViewController.swift */,
 				8756DCEE1BB20D1500703C1C /* MyNavigationController.swift */,
 				875398EE1B70DF6C00752667 /* ViewController.swift */,
-				870B5A361B7E0ECE0087063C /* PetCell.swift */,
-				87A9D7C61B83577600C7CC06 /* PetCell.xib */,
 				6A0EEF951B890D4A00A61325 /* CadastroViewController.swift */,
 				87809B441BB12ECE000E1F3A /* DetalhePet.swift */,
 				8756DCF21BB2149E00703C1C /* BaseController.swift */,
@@ -374,10 +394,14 @@
 				875398F71B70DF6C00752667 /* LaunchScreen.xib in Resources */,
 				6A3F11901BB36FEB000810E0 /* Checked-25.png in Resources */,
 				875398F41B70DF6C00752667 /* Images.xcassets in Resources */,
+				8753FFBD1BB39DFD00ABFAEA /* th-Cartoon-Bone.png in Resources */,
 				6A3F11921BB36FEB000810E0 /* Checked-50.png in Resources */,
 				8756DD091BB25A0400703C1C /* osso5.png in Resources */,
 				6A0EEF941B890BF800A61325 /* camera.png in Resources */,
+				8753FFBB1BB39DFD00ABFAEA /* osso.png in Resources */,
+				8753FFBE1BB39DFD00ABFAEA /* Osso_de_Chafer.png in Resources */,
 				6ABF9EC21BB3831300F69100 /* dog.jpeg in Resources */,
+				8753FFBC1BB39DFD00ABFAEA /* bones-307870_640.png in Resources */,
 				6A3F11911BB36FEB000810E0 /* Checked-32.png in Resources */,
 				6A3F11931BB36FEB000810E0 /* img-fundo.png in Resources */,
 				6A3F11941BB36FEB000810E0 /* pets.png in Resources */,

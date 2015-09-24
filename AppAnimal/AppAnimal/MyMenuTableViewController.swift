@@ -9,14 +9,13 @@
 import UIKit
 
 class MyMenuTableViewController: UITableViewController {
-    var selectedMenuItem : Int = 0
     
+    var selectedMenuItem : Int = 0
     var listaTelas = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-          
         // Customize apperance of table view
         tableView.contentInset = UIEdgeInsetsMake(64.0, 0, 0, 0) //
         tableView.separatorStyle = .None
@@ -26,27 +25,22 @@ class MyMenuTableViewController: UITableViewController {
         // Preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
         
-        
         listaTelas = ["Caes","Gatos","Passaros","Outros","Videoteca","Cadastrar","Detalhe","Mapa"]
-        
         
         tableView.selectRowAtIndexPath(NSIndexPath(forRow: selectedMenuItem, inSection: 0), animated: false, scrollPosition: .Middle)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // Return the number of sections.
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of rows in the section.
         return listaTelas.count
     }
 
@@ -75,8 +69,6 @@ class MyMenuTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        print("did select row: \(indexPath.row)")
         
         if (indexPath.row == selectedMenuItem) {
             return

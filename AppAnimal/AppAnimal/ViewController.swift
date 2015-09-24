@@ -16,15 +16,10 @@ import Alamofire
 class ViewController: UITableViewController {
 
     let ws:ClientWS = ClientWS()
-    
     let classeTeste:PetTeste = PetTeste()
-    
     let parse:ParseModels = ParseModels()
-    
     var a : JSON = JSON.null
-    
     var listaVideo = [Video]()
-    
     let textCellIdentifier = "cell"
     
     @IBOutlet weak var tablePet: UITableView!
@@ -32,20 +27,14 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
        super.viewDidLoad()
         
-        
-        print("Nosso tipo de pet é : \(self.title)")
-        
-        
        let xib = UINib(nibName: "PetCell", bundle: nil)
        self.tablePet.registerNib(xib, forCellReuseIdentifier: "cell")
-        
      
        // Pega os pets para popular a lista
        pegaListaPetsByTipo()
         
-        
         let v1:Video = Video()
-        v1.titulo = "Adestrando o veroz"
+        v1.titulo = "Adestrando o feroz"
         v1.urlImage = "http://d38zt8ehae1tnt.cloudfront.net/Best_Pets_Videos_Mookie_and_Matt_Ready_Set_Play_2013__155543.jpg?v=1382936168"
         
         let v2:Video = Video()
@@ -62,8 +51,7 @@ class ViewController: UITableViewController {
         
         self.listaVideo = [v1,v2,v3,v4]
         
-        
-        
+
         let label = UILabel(frame: CGRectMake(0, 0, 200, 21))
         label.center = CGPointMake(160, 284)
         label.textAlignment = NSTextAlignment.Center
@@ -72,8 +60,6 @@ class ViewController: UITableViewController {
         label.font = UIFont.boldSystemFontOfSize(30.0)
         self.navigationItem.titleView = label
         
-        
-    
     }
     
     @IBAction func toggleSideMenu(sender: AnyObject) {
@@ -168,46 +154,28 @@ class ViewController: UITableViewController {
     
     
     func pegaListaPetsByTipo(){
-        
         if(self.title==nil){
             self.title = "Cachorro"
         }
-        
-        ws.getPetsByTipo({retorno in
-            
-            self.a = retorno!
-            
-            self.tableView.reloadData()
-            
-            self.tableView.reloadInputViews()
-            
-            
-            return
+             ws.getPetsByTipo(
+                    {retorno in
+                   self.a = retorno!
+                    self.tableView.reloadData()
+                    self.tableView.reloadInputViews()
+                    return
         }, tipo: (self.title?.lowercaseString)!)
-        
     }
 
  
-    func pegaListaPets(){
-        
-       
-        
-        ws.getPets({retorno in
-            
+    func pegaListaPets()
+        {
+            ws.getPets({retorno in
             self.a = retorno!
-            
             self.tableView.reloadData()
-            
             self.tableView.reloadInputViews()
-        
-           
             return
         })
       
     }
-    
-    
-   
-
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D1m-7C-Pfd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D1m-7C-Pfd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSF-JB-l0z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="776"/>
+            <point key="canvasLocation" x="398" y="829"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bvd-f3-jcE">
@@ -235,11 +235,17 @@
                                 <rect key="frame" x="78" y="182" width="226" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D1e-6m-YbM" id="rf2-us-Uic"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-SI-Zic">
                                 <rect key="frame" x="78" y="225" width="87" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D1e-6m-YbM" id="KCb-IH-a9y"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ano" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gr8-36-AfN">
                                 <rect key="frame" x="179" y="226" width="125" height="30"/>
@@ -255,6 +261,9 @@
                                 <rect key="frame" x="78" y="308" width="226" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D1e-6m-YbM" id="byB-Df-CEY"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Selecione..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ah-8B-j7x">
                                 <rect key="frame" x="78" y="351" width="226" height="30"/>
@@ -299,7 +308,13 @@
                     <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="imgPet" destination="4fq-5l-y8s" id="ZgN-6C-1Ln"/>
-                        <outlet property="txtTipoIdade" destination="Gr8-36-AfN" id="yRo-Nl-ZQt"/>
+                        <outlet property="tfGenero" destination="ut4-pQ-yz4" id="vwX-Ty-Nef"/>
+                        <outlet property="tfIdade" destination="Na5-SI-Zic" id="fvb-ZP-1qu"/>
+                        <outlet property="tfNome" destination="ed8-nd-dBi" id="AoP-ro-LEp"/>
+                        <outlet property="tfPorte" destination="ufr-Sb-kWg" id="JjU-BG-HLX"/>
+                        <outlet property="tfRaca" destination="s8B-7t-Wsm" id="a8E-l7-ugx"/>
+                        <outlet property="tfTipo" destination="2Ah-8B-j7x" id="0rM-l5-Vvf"/>
+                        <outlet property="tfTipoIdade" destination="Gr8-36-AfN" id="xCq-Nr-ndE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cK-ol-4fg" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -30,6 +30,21 @@ class ClientWS{
         }
     }
     
+    // Retornar lista de Videos
+    // Retorno Array
+    func getVideos(completionHandler: (responseObject: JSON?) -> ()) {
+        makeCallVideos(completionHandler)
+    }
+    
+    func makeCallVideos(completionHandler: (responseObject: JSON?) -> ()) {
+        Alamofire.request(.GET, GlobalVariables.sharedManager.URL_BASSE+"videos", headers:headers)
+            .responseJSON { _,  _, response in
+                let json:JSON = JSON(response.value!)
+                completionHandler(responseObject: json)
+        }
+    }
+
+    
     // Retornar lista de Pets filtrado por tipo
     // Retorno Array
     func getPetsByTipo(completionHandler: (responseObject: JSON?) -> (), tipo:String) {

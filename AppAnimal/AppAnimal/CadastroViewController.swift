@@ -21,6 +21,11 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var tfTipo: UITextField!
     @IBOutlet weak var tfPorte: UITextField!
     @IBOutlet weak var tfRaca: UITextField!
+    @IBOutlet weak var tfCuidador: UITextField!
+    @IBOutlet weak var tfTelefone: UITextField!
+    @IBOutlet weak var tfEmail: UITextField!
+    @IBOutlet weak var tvDesc: UITextView!
+    
     
     var pickerView:UIPickerView!
     var pickerViewGenero:UIPickerView!
@@ -97,11 +102,11 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
                 self.pet.pet_tipo = self.tfTipo.text
                 self.pet.pet_porte = self.tfPorte.text
                 self.pet.imagem = urlImagem
-                self.pet.pet_descricao = "-"
+                self.pet.pet_descricao = self.tvDesc.text
                 
-                self.pet.cuidador = "Bruno"
-                self.pet.email = "bsb@bsb"
-                self.pet.telefone = "22113311"
+                self.pet.cuidador = self.tfCuidador.text
+                self.pet.email = self.tfEmail.text
+                self.pet.telefone = self.tfTelefone.text
                 self.pet.descricao = "-"
                 
                 print(self.pet.getString())
@@ -114,6 +119,10 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
                 self.tfNome.text = ""
                 self.tfIdade.text = ""
                 self.tfRaca.text = ""
+                self.tfCuidador.text = ""
+                self.tfTelefone.text = ""
+                self.tvDesc.text = ""
+                self.tfEmail.text = ""
                 self.imgPet.image = UIImage(named: "pets")
                 
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
@@ -208,5 +217,6 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
         textField.resignFirstResponder()
         return true
     }
+    
     
 }

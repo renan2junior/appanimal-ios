@@ -35,4 +35,25 @@ class ParseModels{
         }
         return pets
     }
+    
+    func parseVideo(json:JSON)->Video {
+        
+        let video:Video = Video()
+        video.titulo = json["titulo"].stringValue
+        video.urlImage = json["urlImagem"].stringValue
+        video.urlVideo = json["urlVideo"].stringValue
+        
+        return video
+        
+    }
+    
+    func parseVideoList(json:JSON)->Array<Video>{
+        var videos = Array<Video>()
+        for(var x = 0 ; x<json.count; x++){
+            let video = parseVideo(json[x])
+            videos.append(video)
+        }
+        return videos
+    }
+
 }

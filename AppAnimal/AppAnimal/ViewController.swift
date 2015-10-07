@@ -23,6 +23,8 @@ class ViewController: UITableViewController {
     var listaVideo = [Video]()
     let textCellIdentifier = "cell"
     
+    var videoJSON : JSON = JSON.null
+    
     @IBOutlet weak var tablePet: UITableView!
     
     override func viewDidLoad() {
@@ -34,24 +36,7 @@ class ViewController: UITableViewController {
        // Pega os pets para popular a lista
        pegaListaPetsByTipo()
         
-        let v1:Video = Video()
-        v1.titulo = "Adestrando o feroz"
-        v1.urlImage = "http://d38zt8ehae1tnt.cloudfront.net/Best_Pets_Videos_Mookie_and_Matt_Ready_Set_Play_2013__155543.jpg?v=1382936168"
-        
-        let v2:Video = Video()
-        v2.titulo = "Primeiros cuidados"
-        v2.urlImage = "http://maxcdn.thedesigninspiration.com/wp-content/uploads/2014/08/Animal-Video-006.jpg"
-        
-        let v3:Video = Video()
-        v3.titulo = "Nào vai dar certo"
-        v3.urlImage = "http://www.makeusknow.com/images/funny-dog-video.jpg"
-        
-        let v4:Video = Video()
-        v4.titulo = "To de olho"
-        v4.urlImage = "http://www.awesomelycute.com/gallery/2011/11/awesomelycute-video-36.jpg"
-        
-        self.listaVideo = [v1,v2,v3,v4]
-        
+        pegaListaVideos();
 
         let label = UILabel(frame: CGRectMake(0, 0, 200, 21))
         label.center = CGPointMake(160, 284)
@@ -181,6 +166,42 @@ class ViewController: UITableViewController {
             return
         })
       
+    }
+    
+    func carregaVideos() {
+        
+        self.listaVideo = parse.parseVideoList(self.videoJSON)
+        
+        /*let v1:Video = Video()
+        
+        v1.titulo = "Adestrando o Feroz"
+        v1.urlImage = "http://d38zt8ehae1tnt.cloudfront.net/Best_Pets_Videos_Mookie_and_Matt_Ready_Set_Play_2013__155543.jpg?v=1382936168"
+        
+        let v2:Video = Video()
+        v2.titulo = "Primeiros cuidados"
+        v2.urlImage = "http://maxcdn.thedesigninspiration.com/wp-content/uploads/2014/08/Animal-Video-006.jpg"
+        
+        let v3:Video = Video()
+        v3.titulo = "Não vai dar certo"
+        v3.urlImage = "http://www.makeusknow.com/images/funny-dog-video.jpg"
+        
+        let v4:Video = Video()
+        v4.titulo = "To de olho"
+        v4.urlImage = "http://www.awesomelycute.com/gallery/2011/11/awesomelycute-video-36.jpg"
+        
+        self.listaVideo = [v1,v2,v3,v4]*/
+
+        
+    }
+    
+    func pegaListaVideos()
+    {
+        ws.getVideos({retorno in
+            self.videoJSON = retorno!
+            self.carregaVideos()
+            return
+        })
+
     }
 }
 

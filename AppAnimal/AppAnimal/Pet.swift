@@ -25,11 +25,7 @@ class Pet {
     var pet_tipo_idade:String!
     var pet_idade:String!
     var pet_porte:String!
-    
-    
-    
-    
-    
+    var pet_genero:String!
     
     
     func getString()->Dictionary<String,String>{
@@ -41,12 +37,14 @@ class Pet {
             "pet_tipo":pet_tipo,
             "pet_tipo_idade":pet_tipo_idade,
             "pet_raca":pet_raca,
+            "pet_idade":pet_idade,
+            "pet_porte":pet_porte,
+            "pet_genero":pet_genero,
             "imagem":imagem,
             "cuidador":cuidador,
             "email":email,
             "telefone":telefone,
-            "pet_idade":pet_idade,
-            "pet_porte":pet_porte
+            "descricao":descricao
         ]
 
         return parameters

@@ -6,5 +6,4 @@ target 'AppAnimal' do
 	pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
     pod 'AWSCognito'
     pod 'AWSS3', '~> 2.2.0'
-	
 end

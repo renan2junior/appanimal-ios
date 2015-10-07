@@ -13,6 +13,7 @@ import SwiftyJSON
 import Alamofire
 
 
+
 class ViewController: UITableViewController {
 
     let ws:ClientWS = ClientWS()
@@ -117,8 +118,12 @@ class ViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-     
         
+        let descPet : DescricaoViewController = DescricaoViewController()
+        descPet.pet = parse.parsePet(self.a[indexPath.row])
+        self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        self.modalPresentationStyle = .CurrentContext // Display on top of current UIView
+        self.presentViewController(descPet, animated: true, completion: nil)
     }
     
     override func prepareForSegue(segue:(UIStoryboardSegue!), sender:AnyObject!)

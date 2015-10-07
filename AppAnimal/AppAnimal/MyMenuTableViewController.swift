@@ -25,7 +25,7 @@ class MyMenuTableViewController: UITableViewController {
         // Preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
         
-        listaTelas = ["Caes","Gatos","Passaros","Outros","Videoteca","Cadastrar","Detalhe","Mapa"]
+        listaTelas = ["Caes","Gatos","Passaros","Outros","Videoteca","Cadastrar","Mapa"]
         
         tableView.selectRowAtIndexPath(NSIndexPath(forRow: selectedMenuItem, inSection: 0), animated: false, scrollPosition: .Middle)
     }
@@ -103,9 +103,7 @@ class MyMenuTableViewController: UITableViewController {
         case 5:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ControllerCadastro")
             break
-        case 6:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("DetalhePet")
-            break
+        
         default:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MapaPet")
             destViewController.title = "Mapa"

@@ -20,6 +20,10 @@ class ParseModels{
         pet.email = json["email"].stringValue
         pet.imagem = json["imagem"].stringValue
         pet.pet_nome = json["pet_nome"].stringValue
+        pet.pet_raca = json["pet_raca"].stringValue
+        pet.pet_porte = json["pet_porte"].stringValue
+        pet.pet_tipo = json["pet_tipo"].stringValue
+        pet.pet_idade = json["pet_idade"].stringValue
         return pet
     }
     

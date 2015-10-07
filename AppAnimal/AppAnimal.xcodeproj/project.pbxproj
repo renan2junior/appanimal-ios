@@ -45,6 +45,7 @@
 		879967791BAA739700A3B0A6 /* PetTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879967781BAA739700A3B0A6 /* PetTeste.swift */; };
 		879FDAF31BC4A8CB00A96A7E /* DescricaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FDAF11BC4A8CB00A96A7E /* DescricaoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		879FDAF41BC4A8CB00A96A7E /* DescricaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 879FDAF21BC4A8CB00A96A7E /* DescricaoViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		879FDB0E1BC4C54C00A96A7E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879FDB0D1BC4C54C00A96A7E /* MediaPlayer.framework */; };
 		87A9D7C71B83577600C7CC06 /* PetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A9D7C61B83577600C7CC06 /* PetCell.xib */; };
 		F279737F601E0C6B1888DAC8 /* Pods_AppAnimal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -104,6 +105,7 @@
 		879967781BAA739700A3B0A6 /* PetTeste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTeste.swift; sourceTree = "<group>"; };
 		879FDAF11BC4A8CB00A96A7E /* DescricaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescricaoViewController.swift; sourceTree = "<group>"; };
 		879FDAF21BC4A8CB00A96A7E /* DescricaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DescricaoViewController.xib; sourceTree = "<group>"; };
+		879FDB0D1BC4C54C00A96A7E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		87A9D7C61B83577600C7CC06 /* PetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetCell.xib; sourceTree = "<group>"; };
 		88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAnimal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28D07534D1A5A18139FDC88 /* Pods-AppAnimal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAnimal.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppAnimal/Pods-AppAnimal.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				879FDB0E1BC4C54C00A96A7E /* MediaPlayer.framework in Frameworks */,
 				F279737F601E0C6B1888DAC8 /* Pods_AppAnimal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +143,7 @@
 		607A8455F7BE6EB2029C076F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				879FDB0D1BC4C54C00A96A7E /* MediaPlayer.framework */,
 				88700CC3DE1DB281FF57A9A7 /* Pods_AppAnimal.framework */,
 			);
 			name = Frameworks;

@@ -12,6 +12,7 @@ import SwiftyJSON
 
 import Alamofire
 
+import MediaPlayer
 
 
 class ViewController: UITableViewController {
@@ -24,6 +25,8 @@ class ViewController: UITableViewController {
     let textCellIdentifier = "cell"
     
     var videoJSON : JSON = JSON.null
+    
+    var moviePlayer:MPMoviePlayerController!
     
     @IBOutlet weak var tablePet: UITableView!
     
@@ -103,12 +106,20 @@ class ViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let descPet : DescricaoViewController = DescricaoViewController()
-        descPet.pet = parse.parsePet(self.a[indexPath.row])
-        self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        self.modalPresentationStyle = .CurrentContext // Display on top of current UIView
-        self.presentViewController(descPet, animated: true, completion: nil)
+        if(self.title == "Videos"){
+            let videoSelecionado = self.listaVideo[indexPath.row]
+            let urlVideo = NSURL(string : videoSelecionado.urlVideo)
+            moviePlayer = MPMoviePlayerController(contentURL: urlVideo)
+            self.view.addSubview(moviePlayer.view)
+            moviePlayer.fullscreen = true
+            moviePlayer.play()
+        }else{
+            let descPet : DescricaoViewController = DescricaoViewController()
+            descPet.pet = parse.parsePet(self.a[indexPath.row])
+            self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+            self.modalPresentationStyle = .CurrentContext // Display on top of current UIView
+            self.presentViewController(descPet, animated: true, completion: nil)            
+        }
     }
     
     override func prepareForSegue(segue:(UIStoryboardSegue!), sender:AnyObject!)
@@ -172,25 +183,7 @@ class ViewController: UITableViewController {
         
         self.listaVideo = parse.parseVideoList(self.videoJSON)
         
-        /*let v1:Video = Video()
-        
-        v1.titulo = "Adestrando o Feroz"
-        v1.urlImage = "http://d38zt8ehae1tnt.cloudfront.net/Best_Pets_Videos_Mookie_and_Matt_Ready_Set_Play_2013__155543.jpg?v=1382936168"
-        
-        let v2:Video = Video()
-        v2.titulo = "Primeiros cuidados"
-        v2.urlImage = "http://maxcdn.thedesigninspiration.com/wp-content/uploads/2014/08/Animal-Video-006.jpg"
-        
-        let v3:Video = Video()
-        v3.titulo = "Não vai dar certo"
-        v3.urlImage = "http://www.makeusknow.com/images/funny-dog-video.jpg"
-        
-        let v4:Video = Video()
-        v4.titulo = "To de olho"
-        v4.urlImage = "http://www.awesomelycute.com/gallery/2011/11/awesomelycute-video-36.jpg"
-        
-        self.listaVideo = [v1,v2,v3,v4]*/
-
+       
         
     }
     
@@ -199,6 +192,8 @@ class ViewController: UITableViewController {
         ws.getVideos({retorno in
             self.videoJSON = retorno!
             self.carregaVideos()
+            self.tableView.reloadData()
+            self.tableView.reloadInputViews()
             return
         })
 

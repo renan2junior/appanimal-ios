@@ -32,8 +32,9 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
        super.viewDidLoad()
-        
-       let xib = UINib(nibName: "PetCell", bundle: nil)
+       // let p:PetTeste = PetTeste()
+       // p.PopulaPet()
+        let xib = UINib(nibName: "PetCell", bundle: nil)
        self.tablePet.registerNib(xib, forCellReuseIdentifier: "cell")
         
         let xibVideo = UINib(nibName: "PetVideoCell", bundle: nil)

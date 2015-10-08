@@ -62,6 +62,8 @@ class PetTeste{
             cao.pet_tipo_idade = "anos"
             cao.telefone = "11111-111111"
             cao.imagem = foto_cao[x]
+            cao.pet_genero = "macho"
+            cao.pet_endereco = "Rua Paulo Prado, Rio de Janeiro - RJ"
             
             ws.postPet(cao)
             
@@ -80,6 +82,8 @@ class PetTeste{
             cao.pet_tipo_idade = "anos"
             cao.telefone = "11111-111111"
             cao.imagem = foto_gato[x]
+            cao.pet_genero = "macho"
+            cao.pet_endereco = "Rua Paulo Prado, Rio de Janeiro - RJ"
             
             ws.postPet(cao)
             
@@ -97,7 +101,8 @@ class PetTeste{
             cao.pet_tipo_idade = "anos"
             cao.telefone = "11111-111111"
             cao.imagem = foto_cao[x]
-            
+            cao.pet_genero = "macho"
+            cao.pet_endereco = "Rua Visconde de Tocantins, Rio de Janeiro - RJ"
             ws.postPet(cao)
             
             cao = Pet()
@@ -114,7 +119,8 @@ class PetTeste{
             cao.pet_tipo_idade = "anos"
             cao.telefone = "11111-111111"
             cao.imagem = foto_cao[x]
-            
+            cao.pet_genero = "macho"
+            cao.pet_endereco = "Rua Getulio, Rio de Janeiro - RJ"
             ws.postPet(cao)
 
 

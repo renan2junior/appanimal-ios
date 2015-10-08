@@ -16,6 +16,7 @@ class ParseModels{
      
         let pet:Pet = Pet()
         pet.descricao = json["pet_descricao"].stringValue
+        pet.pet_descricao = json["pet_descricao"].stringValue
         pet.cuidador = json["cuidador"].stringValue
         pet.email = json["email"].stringValue
         pet.imagem = json["imagem"].stringValue
@@ -24,6 +25,11 @@ class ParseModels{
         pet.pet_porte = json["pet_porte"].stringValue
         pet.pet_tipo = json["pet_tipo"].stringValue
         pet.pet_idade = json["pet_idade"].stringValue
+        pet.pet_tipo_idade = json["pet_tipo_idade"].stringValue
+        pet.pet_idade = json["pet_idade"].stringValue
+        pet.pet_genero = json["pet_genero"].stringValue
+        pet.pet_endereco = json["pet_endereco"].stringValue
+       
         return pet
     }
     

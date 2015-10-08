@@ -25,6 +25,7 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var tfTelefone: UITextField!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tvDesc: UITextView!
+    @IBOutlet weak var tvEnd: UITextView!
     
     
     var pickerView:UIPickerView!
@@ -108,6 +109,7 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
                 self.pet.email = self.tfEmail.text
                 self.pet.telefone = self.tfTelefone.text
                 self.pet.descricao = "-"
+                self.pet.pet_endereco = self.tvEnd.text
                 
                 print(self.pet.getString())
                 
@@ -122,6 +124,7 @@ class CadastroViewController: UIViewController, UIImagePickerControllerDelegate,
                 self.tfCuidador.text = ""
                 self.tfTelefone.text = ""
                 self.tvDesc.text = ""
+                self.tvEnd.text = ""
                 self.tfEmail.text = ""
                 self.imgPet.image = UIImage(named: "pets")
                 

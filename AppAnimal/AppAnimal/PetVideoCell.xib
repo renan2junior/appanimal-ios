@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="217" id="ZnZ-T4-GpW" customClass="PetCell" customModule="AppAnimal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZnZ-T4-GpW" id="Te3-6S-6LK">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="219"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W6D-3w-A6U">
+                        <rect key="frame" x="0.0" y="-5" width="330" height="229"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaI-wJ-Fjn">
+                        <rect key="frame" x="0.0" y="196" width="330" height="28"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Nome">
+                                <attributes>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="22" name="Seravek-BoldItalic"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="highlightedColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="shadowColor" red="0.20594521260000001" green="0.45408205730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_bt_play1.png" translatesAutoresizingMaskIntoConstraints="NO" id="CHf-HN-9cQ">
+                        <rect key="frame" x="117" y="61" width="96" height="97"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="97" id="PGM-yB-5Vt"/>
+                            <constraint firstAttribute="width" constant="96" id="PPy-fz-1QU"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="UaI-wJ-Fjn" firstAttribute="trailing" secondItem="W6D-3w-A6U" secondAttribute="trailing" id="10s-tY-dkH"/>
+                    <constraint firstItem="CHf-HN-9cQ" firstAttribute="centerX" secondItem="Te3-6S-6LK" secondAttribute="centerX" id="6VA-Xv-tP7"/>
+                    <constraint firstItem="W6D-3w-A6U" firstAttribute="centerX" secondItem="CHf-HN-9cQ" secondAttribute="centerX" id="CPT-Pg-Efy"/>
+                    <constraint firstItem="CHf-HN-9cQ" firstAttribute="leading" secondItem="Te3-6S-6LK" secondAttribute="leadingMargin" constant="109" id="DbF-9K-kR3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="CHf-HN-9cQ" secondAttribute="trailing" constant="109" id="JFU-tz-l18"/>
+                    <constraint firstItem="UaI-wJ-Fjn" firstAttribute="centerX" secondItem="CHf-HN-9cQ" secondAttribute="centerX" id="Om4-Lx-Stw"/>
+                    <constraint firstItem="UaI-wJ-Fjn" firstAttribute="bottom" secondItem="W6D-3w-A6U" secondAttribute="bottom" id="Qgc-Ae-TFT"/>
+                    <constraint firstItem="CHf-HN-9cQ" firstAttribute="top" secondItem="Te3-6S-6LK" secondAttribute="topMargin" constant="55" id="QrG-fi-IQN"/>
+                    <constraint firstItem="W6D-3w-A6U" firstAttribute="centerY" secondItem="CHf-HN-9cQ" secondAttribute="centerY" id="Vo6-wA-qbN"/>
+                    <constraint firstItem="W6D-3w-A6U" firstAttribute="centerY" secondItem="CHf-HN-9cQ" secondAttribute="centerY" id="dQZ-xq-1E4"/>
+                    <constraint firstItem="UaI-wJ-Fjn" firstAttribute="top" secondItem="CHf-HN-9cQ" secondAttribute="bottom" constant="19" id="eXh-Ru-jtQ"/>
+                    <constraint firstItem="CHf-HN-9cQ" firstAttribute="centerY" secondItem="Te3-6S-6LK" secondAttribute="centerY" id="jke-eg-g9s"/>
+                    <constraint firstItem="UaI-wJ-Fjn" firstAttribute="leading" secondItem="W6D-3w-A6U" secondAttribute="leading" id="kbG-lt-jld"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="UaI-wJ-Fjn" secondAttribute="bottom" constant="-13" id="wAx-Nu-oiV"/>
+                    <constraint firstItem="UaI-wJ-Fjn" firstAttribute="leading" secondItem="Te3-6S-6LK" secondAttribute="leading" id="wWs-XF-1Td"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="dQZ-xq-1E4"/>
+                        <exclude reference="DbF-9K-kR3"/>
+                        <exclude reference="JFU-tz-l18"/>
+                        <exclude reference="QrG-fi-IQN"/>
+                        <exclude reference="Om4-Lx-Stw"/>
+                        <exclude reference="eXh-Ru-jtQ"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imagePet" destination="W6D-3w-A6U" id="b8p-WT-uw3"/>
+                <outlet property="nome" destination="UaI-wJ-Fjn" id="YDF-2k-sq6"/>
+            </connections>
+            <point key="canvasLocation" x="471" y="332"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="main_bt_play1.png" width="206" height="206"/>
+    </resources>
+</document>

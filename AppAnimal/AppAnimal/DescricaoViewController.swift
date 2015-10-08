@@ -25,8 +25,8 @@ class DescricaoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap = UITapGestureRecognizer(target: self, action: "backViewTapped:")
-        view.addGestureRecognizer(tap)
+       //let tap = UITapGestureRecognizer(target: self, action: "backViewTapped:")
+        //view.addGestureRecognizer(tap)
         
         print(" O pet é \(pet.descricao)")
         
@@ -43,6 +43,32 @@ class DescricaoViewController: UIViewController {
         
 
     }
+    
+    @IBAction func shareButtonClicked(sender: UIButton)
+    {
+        let textToShare = "Adoto nosso pet \(pet.pet_nome)"
+        
+        if let myWebsite = NSURL(string: "http://irmaoanimal.com/")
+        {
+            let objectsToShare = [textToShare, myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            //New Excluded Activities Code
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+            //
+            
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
+    }
+
+    
+    @IBAction func closeDescricao(sender: UIButton){
+        
+         presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

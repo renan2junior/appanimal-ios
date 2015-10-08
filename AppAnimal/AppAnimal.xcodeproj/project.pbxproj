@@ -37,6 +37,14 @@
 		8756DCF91BB23F8D00703C1C /* MapaPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756DCF81BB23F8D00703C1C /* MapaPet.swift */; settings = {ASSET_TAGS = (); }; };
 		8756DD071BB2567500703C1C /* osso4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8756DD061BB2567500703C1C /* osso4.png */; settings = {ASSET_TAGS = (); }; };
 		8756DD091BB25A0400703C1C /* osso5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8756DD081BB25A0400703C1C /* osso5.png */; settings = {ASSET_TAGS = (); }; };
+		8756F15D1BC6080100FC442A /* main_bt_play_escu.png in Resources */ = {isa = PBXBuildFile; fileRef = 8756F15A1BC6080100FC442A /* main_bt_play_escu.png */; settings = {ASSET_TAGS = (); }; };
+		8756F15E1BC6080100FC442A /* main_bt_play2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8756F15B1BC6080100FC442A /* main_bt_play2.png */; settings = {ASSET_TAGS = (); }; };
+		8756F15F1BC6080100FC442A /* main_bt_play1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8756F15C1BC6080100FC442A /* main_bt_play1.png */; settings = {ASSET_TAGS = (); }; };
+		8756F1611BC6082D00FC442A /* PetVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8756F1601BC6082D00FC442A /* PetVideoCell.xib */; settings = {ASSET_TAGS = (); }; };
+		8756F1631BC60C5700FC442A /* btCompartilharPressed-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 8756F1621BC60C5700FC442A /* btCompartilharPressed-iphone.png */; settings = {ASSET_TAGS = (); }; };
+		8756F1651BC60D1F00FC442A /* btCompartilhar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8756F1641BC60D1F00FC442A /* btCompartilhar.png */; settings = {ASSET_TAGS = (); }; };
+		8756F1681BC60DEF00FC442A /* close-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 8756F1661BC60DEF00FC442A /* close-128.png */; settings = {ASSET_TAGS = (); }; };
+		8756F1691BC60DEF00FC442A /* share-alt-120 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 8756F1671BC60DEF00FC442A /* share-alt-120 (1).png */; settings = {ASSET_TAGS = (); }; };
 		8757DFFD1B7A164D00E1A59E /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFC1B7A164D00E1A59E /* GlobalVariables.swift */; };
 		8757DFFF1B7A182100E1A59E /* ClientSW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DFFE1B7A182100E1A59E /* ClientSW.swift */; };
 		87809B451BB12ECE000E1F3A /* DetalhePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87809B441BB12ECE000E1F3A /* DetalhePet.swift */; settings = {ASSET_TAGS = (); }; };
@@ -97,6 +105,14 @@
 		8756DCF81BB23F8D00703C1C /* MapaPet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaPet.swift; sourceTree = "<group>"; };
 		8756DD061BB2567500703C1C /* osso4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = osso4.png; sourceTree = "<group>"; };
 		8756DD081BB25A0400703C1C /* osso5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = osso5.png; sourceTree = "<group>"; };
+		8756F15A1BC6080100FC442A /* main_bt_play_escu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_bt_play_escu.png; sourceTree = "<group>"; };
+		8756F15B1BC6080100FC442A /* main_bt_play2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_bt_play2.png; sourceTree = "<group>"; };
+		8756F15C1BC6080100FC442A /* main_bt_play1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_bt_play1.png; sourceTree = "<group>"; };
+		8756F1601BC6082D00FC442A /* PetVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetVideoCell.xib; sourceTree = "<group>"; };
+		8756F1621BC60C5700FC442A /* btCompartilharPressed-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btCompartilharPressed-iphone.png"; sourceTree = "<group>"; };
+		8756F1641BC60D1F00FC442A /* btCompartilhar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btCompartilhar.png; sourceTree = "<group>"; };
+		8756F1661BC60DEF00FC442A /* close-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-128.png"; sourceTree = "<group>"; };
+		8756F1671BC60DEF00FC442A /* share-alt-120 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-alt-120 (1).png"; sourceTree = "<group>"; };
 		8757DFFC1B7A164D00E1A59E /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		8757DFFE1B7A182100E1A59E /* ClientSW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSW.swift; sourceTree = "<group>"; };
 		87809B441BB12ECE000E1F3A /* DetalhePet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhePet.swift; sourceTree = "<group>"; };
@@ -164,6 +180,13 @@
 		6A0EEF921B890BF800A61325 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				8756F1661BC60DEF00FC442A /* close-128.png */,
+				8756F1671BC60DEF00FC442A /* share-alt-120 (1).png */,
+				8756F1641BC60D1F00FC442A /* btCompartilhar.png */,
+				8756F1621BC60C5700FC442A /* btCompartilharPressed-iphone.png */,
+				8756F15A1BC6080100FC442A /* main_bt_play_escu.png */,
+				8756F15B1BC6080100FC442A /* main_bt_play2.png */,
+				8756F15C1BC6080100FC442A /* main_bt_play1.png */,
 				6ABF9EC11BB3831300F69100 /* dog.jpeg */,
 				6A3F118B1BB36FEB000810E0 /* Checked-25.png */,
 				6A3F118C1BB36FEB000810E0 /* Checked-32.png */,
@@ -256,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				87A9D7C61B83577600C7CC06 /* PetCell.xib */,
+				8756F1601BC6082D00FC442A /* PetVideoCell.xib */,
 				870B5A361B7E0ECE0087063C /* PetCell.swift */,
 			);
 			name = Cell;
@@ -406,24 +430,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8756F1681BC60DEF00FC442A /* close-128.png in Resources */,
 				875398F21B70DF6C00752667 /* Main.storyboard in Resources */,
 				87A9D7C71B83577600C7CC06 /* PetCell.xib in Resources */,
 				8756DD071BB2567500703C1C /* osso4.png in Resources */,
+				8756F15D1BC6080100FC442A /* main_bt_play_escu.png in Resources */,
 				875398F71B70DF6C00752667 /* LaunchScreen.xib in Resources */,
 				6A3F11901BB36FEB000810E0 /* Checked-25.png in Resources */,
 				875398F41B70DF6C00752667 /* Images.xcassets in Resources */,
 				8753FFBD1BB39DFD00ABFAEA /* th-Cartoon-Bone.png in Resources */,
 				6A3F11921BB36FEB000810E0 /* Checked-50.png in Resources */,
+				8756F15E1BC6080100FC442A /* main_bt_play2.png in Resources */,
 				8756DD091BB25A0400703C1C /* osso5.png in Resources */,
+				8756F1611BC6082D00FC442A /* PetVideoCell.xib in Resources */,
 				6A0EEF941B890BF800A61325 /* camera.png in Resources */,
 				8753FFBB1BB39DFD00ABFAEA /* osso.png in Resources */,
 				8753FFBE1BB39DFD00ABFAEA /* Osso_de_Chafer.png in Resources */,
 				879FDAF41BC4A8CB00A96A7E /* DescricaoViewController.xib in Resources */,
 				6ABF9EC21BB3831300F69100 /* dog.jpeg in Resources */,
+				8756F1651BC60D1F00FC442A /* btCompartilhar.png in Resources */,
+				8756F1631BC60C5700FC442A /* btCompartilharPressed-iphone.png in Resources */,
 				8753FFBC1BB39DFD00ABFAEA /* bones-307870_640.png in Resources */,
 				6A3F11911BB36FEB000810E0 /* Checked-32.png in Resources */,
 				6A3F11931BB36FEB000810E0 /* img-fundo.png in Resources */,
 				6A3F11941BB36FEB000810E0 /* pets.png in Resources */,
+				8756F15F1BC6080100FC442A /* main_bt_play1.png in Resources */,
+				8756F1691BC60DEF00FC442A /* share-alt-120 (1).png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

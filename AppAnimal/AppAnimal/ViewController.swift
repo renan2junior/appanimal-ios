@@ -35,6 +35,9 @@ class ViewController: UITableViewController {
         
        let xib = UINib(nibName: "PetCell", bundle: nil)
        self.tablePet.registerNib(xib, forCellReuseIdentifier: "cell")
+        
+        let xibVideo = UINib(nibName: "PetVideoCell", bundle: nil)
+        self.tablePet.registerNib(xibVideo, forCellReuseIdentifier: "videoCell")
      
        // Pega os pets para popular a lista
        pegaListaPetsByTipo()
@@ -72,7 +75,7 @@ class ViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if(self.title == "Videos"){
-            let cell = self.tablePet.dequeueReusableCellWithIdentifier("cell") as! PetCell
+            let cell = self.tablePet.dequeueReusableCellWithIdentifier("videoCell") as! PetCell
             
             let video : Video = self.listaVideo[indexPath.row]
             

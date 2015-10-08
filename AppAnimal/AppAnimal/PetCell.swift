@@ -15,7 +15,8 @@ class PetCell: UITableViewCell{
     @IBOutlet weak var descricao: UILabel!
     @IBOutlet weak var nome: UILabel!
     
-     
+
+        
     
     override func awakeFromNib() {
         super.awakeFromNib()

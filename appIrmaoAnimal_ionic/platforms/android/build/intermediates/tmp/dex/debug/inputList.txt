@@ -1,2 +1,2 @@
-/Users/renanjunior/ionic_workspace/appIrmaoAnimal/platforms/android/build/intermediates/classes/debug
-/Users/renanjunior/ionic_workspace/appIrmaoAnimal/platforms/android/build/intermediates/pre-dexed/debug/classes-741055aebe4ee6a2df9a93191005cede0228bfbb.jar
+/Users/renanjunior/ionic_workspace/appanimal-ios/appIrmaoAnimal_ionic/platforms/android/build/intermediates/classes/debug
+/Users/renanjunior/ionic_workspace/appanimal-ios/appIrmaoAnimal_ionic/platforms/android/build/intermediates/pre-dexed/debug/classes-34720dcb097b4f6c9bd0c93f8c63d3ff151f67ff.jar

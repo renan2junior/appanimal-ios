@@ -1,4 +1,4 @@
-<ion-navbar *navbar>
+<ion-navbar *navbar ng-style="{'background-color': red}">
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
@@ -8,20 +8,15 @@
 </ion-navbar>
 
 <ion-content class="home">
-
     <ion-list> 
         <ion-item *ngFor="#pet of pets" (click)="itemTapped($event, pet)">
-        <img *ngIf="pet.imagemBase64" src="{{pet.imagemBase64}}"/>
-        <img *ngIf="pet.imagem" src="{{pet.imagem}}"/>
-        <ion-card>
-            <ion-card-content>
-                <h2>{{pet.pet_nome}}</h2>
-                <p class="item-description">{{pet.pet_descricao}}</p>
-            </ion-card-content>
-        </ion-card>
+                <ion-card class="advanced-background">
+                     <img *ngIf="pet.imagemBase64" src="{{pet.imagemBase64}}"/>
+                     <img *ngIf="pet.imagem" src="{{pet.imagem}}"/>
+                     <p class="advanced-background-title">{{pet.pet_nome}}</p>
+                </ion-card>
         </ion-item>
     </ion-list>
- 
 </ion-content>
 
 <button fab fab-right fab-bottom (click)="btCadTapped()">

@@ -5,7 +5,7 @@
 <ion-content>
   <div id="map_canvas"></div>
   <div *ngIf="pet" class="selection">    
-    <ion-card>
+    <!--ion-card>
       <img *ngIf="pet.imagemBase64" src="{{pet.imagemBase64}}" />
       <img *ngIf="pet.imagem" src="{{pet.imagem}}"/>
       <button fab fab-right fab-top (click)="initializeMap(pet)">
@@ -17,6 +17,14 @@
           <p>{{pet.pet_descricao}}</p>
         </ion-item-content>
       </ion-item>   
+    </ion-card-->
+    <ion-card class="advanced-background">
+         <img *ngIf="pet.imagemBase64" src="{{pet.imagemBase64}}"/>
+         <img *ngIf="pet.imagem" src="{{pet.imagem}}"/>
+         <button fab fab-right fab-top (click)="initializeMap(pet)">
+             <ion-icon name="pin"></ion-icon>
+         </button>
+         <p class="advanced-background-title">{{pet.pet_nome}}</p>
     </ion-card>
     <ion-card>
         <ion-card-content>

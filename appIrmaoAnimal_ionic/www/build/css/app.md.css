@@ -8516,6 +8516,30 @@ ion-avatar img {
 .item-description {
   white-space: normal !important; }
 
+.minhanavbar {
+  background-color: #FFF324;
+  color: #FFF324; }
+
+.advanced-background {
+  width: 100%;
+  text-align: center !important; }
+
+ion-card ion-item.advanced-trans.item {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent; }
+
+ion-card p.advanced-background-title {
+  position: absolute;
+  bottom: -2pt;
+  font-size: 2.0em;
+  width: 100%;
+  font-weight: bold;
+  background: black;
+  opacity: 0.5;
+  color: #FFF324	 !important; }
+
 #map_canvas {
   width: 100%;
   height: 300px; }

@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/renanjunior/ionic_workspace/appIrmaoAnimal/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/classes.jar"
+        jar="/Users/renanjunior/ionic_workspace/appanimal-ios/appIrmaoAnimal_ionic/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="8c95156a97465e77eb2d765da24f912aa3605c26">
-        <dex dex="/Users/renanjunior/ionic_workspace/appIrmaoAnimal/platforms/android/build/intermediates/pre-dexed/debug/classes-741055aebe4ee6a2df9a93191005cede0228bfbb.jar" />
+        sha1="429a60cb029b07bd91b98e7755b8f25438ec3690">
+        <dex dex="/Users/renanjunior/ionic_workspace/appanimal-ios/appIrmaoAnimal_ionic/platforms/android/build/intermediates/pre-dexed/debug/classes-34720dcb097b4f6c9bd0c93f8c63d3ff151f67ff.jar" />
     </item>
 
 </items>

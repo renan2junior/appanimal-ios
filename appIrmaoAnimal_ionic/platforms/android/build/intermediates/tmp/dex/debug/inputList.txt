@@ -1,0 +1,2 @@
+/Users/renanjunior/ionic_workspace/appIrmaoAnimal/platforms/android/build/intermediates/classes/debug
+/Users/renanjunior/ionic_workspace/appIrmaoAnimal/platforms/android/build/intermediates/pre-dexed/debug/classes-741055aebe4ee6a2df9a93191005cede0228bfbb.jar

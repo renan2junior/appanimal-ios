@@ -1,0 +1,87 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>
+    Cadastro
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+    <form [ngFormModel]="form" (ngSubmit)="onSubmit(form.value)">   
+       
+       <ion-card>    
+            <ion-card-content id="petImgContent">
+                <img id="petImg" src="build/fonts/img-icon.png" />
+                <img id="petFoto" /><br /><br />
+            </ion-card-content>
+            <ion-item>
+                <button small (click)="getPhoto($event)">Foto</button>
+                <button small (click)="getPicture($event)">Galeria</button>
+            </ion-item>
+       </ion-card>
+       
+       <ion-input floating-label>
+            <ion-label>Nome</ion-label>
+            <input type="text" value="" [ngFormControl]="petNome">
+        </ion-input>
+        
+        <ion-input floating-label>
+            <ion-label>Sexo [macho, femea]</ion-label>
+            <input type="text" value="" [ngFormControl]="petSexo">
+        </ion-input>
+        
+        <ion-input floating-label>
+            <ion-label>Idade</ion-label>
+            <input type="text" value="" [ngFormControl]="petIdade">
+        </ion-input>
+        
+        <ion-input floating-label>
+            <ion-label>Tipo da Idade [dia, mes, ano]</ion-label>
+            <input type="text" value="" [ngFormControl]="petTipoIdade">
+        </ion-input>
+        
+        <ion-input floating-label>
+            <ion-label>Descrição</ion-label>
+            <input type="text" value="" [ngFormControl]="petDescricao">
+        </ion-input>
+        
+        <ion-input floating-label>
+            <ion-label>Porte [pequeno, medio, grande]</ion-label>
+            <input type="text" value="" [ngFormControl]="petPorte">
+        </ion-input>
+        
+        <ion-input floating-label>
+            <ion-label>Raça</ion-label>
+            <input type="text" value="" [ngFormControl]="petRaca">
+        </ion-input>
+        
+        <ion-input floating-label>
+            <ion-label>Tipo [cachorro, gato, passaro, outros]</ion-label>
+            <input type="text" value="" [ngFormControl]="petTipo">
+        </ion-input>
+        
+        <ion-input floating-label>
+            <ion-label>Endereço</ion-label>
+            <input type="text" value="" [ngFormControl]="petEndereco">
+        </ion-input>
+        
+        <ion-input floating-label>
+            <ion-label>Cuidador</ion-label>
+            <input type="text" value="" [ngFormControl]="cuidador">
+        </ion-input>
+        
+        <ion-input floating-label>
+            <ion-label>Email</ion-label>
+            <input type="text" value="" [ngFormControl]="email">
+        </ion-input>
+        
+        <ion-input floating-label>
+            <ion-label>Telefone</ion-label>
+            <input type="text" value="" [ngFormControl]="telefone">
+        </ion-input>
+        
+        <br/><br/>
+        <button type="submit" block>Salvar</button>
+    </form>
+</ion-content>

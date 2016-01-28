@@ -1,0 +1,41 @@
+<ion-navbar *navbar>
+  <ion-title>Animal</ion-title>
+</ion-navbar>
+ 
+<ion-content>
+  <div id="map_canvas"></div>
+  <div *ngIf="pet" class="selection">    
+    <ion-card>
+      <img *ngIf="pet.imagemBase64" src="{{pet.imagemBase64}}" />
+      <img *ngIf="pet.imagem" src="{{pet.imagem}}"/>
+      <button fab fab-right fab-top (click)="initializeMap(pet)">
+        <ion-icon name="pin"></ion-icon>
+      </button>
+      <ion-item>
+        <ion-item-content class="movie-title-data">
+          <h1>{{pet.pet_nome}}</h1>
+          <p>{{pet.pet_descricao}}</p>
+        </ion-item-content>
+      </ion-item>   
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+           <h2>Informações</h2>
+           <p>{{pet.pet_endereco}}</p>
+           <p>Sexo: {{pet.pet_sexo}}</p>
+           <p>Idade: {{pet.pet_idade}} {{pet.pet_tipo_idade}}(s)</p>
+           <p>Porte: {{pet.pet_porte}}</p>
+           <p>Raça: {{pet.pet_raca}}</p>
+           <p>Tipo: {{pet.pet_tipo}}</p>
+        </ion-card-content>
+    </ion-card>
+        <ion-card>
+        <ion-card-content>
+           <h2>Cuidador</h2>
+           <p>{{pet.cuidador}}</p>
+           <p>E-mail: {{pet.email}}</p>
+           <p>Telefone: {{pet.telefone}}</p>
+        </ion-card-content>
+    </ion-card>
+  </div>  
+</ion-content>
